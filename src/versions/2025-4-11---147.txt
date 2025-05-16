@@ -1,0 +1,93 @@
+Build 147：v8 Beta 版
+这是 v8 的测试版。它不包含任何新的 Neoplasm 派系内容 - 这些内容将包含在未来的测试版中。
+
+自上次发布以来已有一年多的时间，此版本有大量更改。以下是亮点。
+
+运动
+
+对 Serpulo 战役进行了大改，有许多新的用户提交的地图和对现有地图的重制
+战役的难度修正
+新的发射台机制 - 现在需要一个着陆台来接收资源
+行星际加速器的新功能（仍在开发中）
+科技树现在可以在多人游戏中为其他玩家查看
+不同行星的核心数据库选项卡（或 Mod，如果他们选择支持它）
+科技树中扇区的独特图标
+
+
+单位
+
+用于巡逻、控制火力、排队命令等的新单位姿态
+用于循环 payload unit transfer、移动到 payload 块等的新 unit 命令
+一种新的寻路实现，适用于性能增强和减少装置堵塞的装置
+单位的命令组热键
+单位命令选择的新视觉对象
+
+
+...以及更多
+
+支持修复废弃块的新功能
+Erekir 的几个新的实用程序和生产块
+用于在游戏中编辑地形的新 UI
+Erekir 炮塔的新弹药类型
+Serpulo 炮塔弹药的平衡和视觉改进
+有关显示文本和应用逻辑处理器的绘图转换的说明
+用于在具有世界处理器的地图中显示任意游戏内纹理或形状的新系统
+用于轻松管理地图中的世界处理器脚本的新 UI
+逻辑模块的许多不同新功能，尤其是世界处理器
+显著的渲染性能优化
+
+
+使用 Beta 版
+
+要选择加入 Beta 版，请右键单击游戏列表中的 Mindustry，选择 Properties -> Betas，然后在下拉菜单中选择 v8-beta。请记住，这是一个测试版，因此，通常会发生破坏游戏的错误。
+
+作为补充说明：如果您想使用可用的最新 Mindustry 版本，请选择 bleeding-edge 分支。此分支可能非常不稳定，并且可能每天更新多次。可能会发生保存损坏、启动崩溃和许多其他严重错误。大多数用户应该改用 v8-beta 分支。
+
+
+
+
+
+Build 147: v8 Beta Release
+This is a beta release of v8. It does not contain any new Neoplasm faction content - that will be included in a future beta release.
+
+With over a year since last release, this version has a massive amount of changes. Here are the highlights.
+
+Campaign
+
+Overhaul of Serpulo campaign, with many new user-submitted maps and reworks of existing ones
+Difficulty modifiers for the campaign
+New launch pad mechanics - a landing pad is now required to receive resources
+New functionality for the Interplanetary Accelerator (still a work in progress)
+The tech tree can now be viewed in multiplayer for other players
+Core database tabs for different planets (or mods, should they choose to support it)
+Unique icons for sectors in the tech tree
+
+
+Units
+
+New unit stances for patrolling, holding fire, queuing commands, and more
+New unit commands for looping payload unit transfer, moving into payload blocks, and more
+A new pathfinding implementation for units with enhanced performance and reduced unit jams
+Command group hotkeys for units
+New visuals for unit command selection
+
+
+...and more
+
+New functionality that enables repairing derelict blocks
+Several new utility & production blocks for Erekir
+A new UI for editing terrain in-game
+New ammo types for Erekir turrets
+Balancing & visual improvements for Serpulo turret ammo
+Instructions for displaying text and applying drawing transformations for logic processors
+A new system for displaying arbitrary in-game textures or shapes in maps with world processors
+New UI for easily managing world processor scripting in maps
+Many various new features for logic blocks, especially world processors
+Significant rendering performance optimizations
+
+
+Using the Beta
+
+To opt-in to the beta, right-click Mindustry in your games list, select Properties -> Betas, and select v8-beta in the drop-down menu. Keep in mind that this is a beta, and as such, game-breaking bugs may commonly occur.
+
+As an added note: If you would like to use the very latest Mindustry version available, select the bleeding-edge branch instead. This branch can be extremely unstable, and may update many times a day. Save corruptions, startup crashes and many other serious bugs may occur. Most users should use the v8-beta branch instead.

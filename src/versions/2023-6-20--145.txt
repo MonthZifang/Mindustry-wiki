@@ -1,0 +1,41 @@
+内部版本 145
+修复了某些内容被压缩的逻辑图标
+修复了堆栈路由器导致的卡顿问题
+修复了基础 AI 有时不工作的问题
+修复了 Mod 无法覆盖 UI 图像的问题
+修复了在目标中添加的地图标志不同步的问题
+修复了与编辑版面相关的崩溃
+添加了 votekick reason 选项，使 votekicks 可由管理员取消
+添加了管理员切换玩家团队的按钮
+在玩家追踪信息中添加了过去的玩家名称/IP
+向编辑器添加了填充擦除模式
+添加了使 UI 适应 Macbook 缺口的选项
+使 Serpulo 攻击区域在您攻击它们时不会侵入附近的区域
+对 Schematics UI 的各种改进
+现在可以在 reconstructors 中选择 Starting unit 命令
+单位现在在被玩家控制和未控制时保留其最后的命令
+其他寻路错误修复;设备不应卡在向后移动
+有腿/昆虫单位不再会在它们可以跨过的实心块周围寻路
+
+
+
+
+
+Build 145
+Fixed logic icons for certain content being squished
+Fixed a freeze caused by stack routers
+Fixed Base AI not working sometimes
+Fixed mods not being able to override UI images
+Fixed map flags added in objectives not syncing
+Fixed a crash related to editing canvases
+Added votekick reason option, made votekicks cancel-able by admins
+Added button for admins to switch player teams
+Added past player names / IPs to player trace infoa
+Added fill erase mode to editor
+Added option to adapt UI to Macbook notches
+Made Serpulo attack sectors not invade nearby sectors while you are attacking them
+Various improvements to the schematics UI
+Starting unit command can now be selected in reconstructors
+Units now retain their last command when controlled and un-controlled by players
+Misc pathfinding bugfixes; units should not get stuck moving backwards
+Legged/insect units should no longer pathfind around solid blocks they can step over

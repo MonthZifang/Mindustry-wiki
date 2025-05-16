@@ -1,0 +1,26 @@
+版本 147.1（测试版）
+添加了有关难度修改器附加信息的工具提示
+为 Serpulo 中的 RTS AI 添加了实验规则（可能有错误）
+添加了 OpenGL 错误日志记录
+降低 Serpulo 上各种 T1 单位工厂和单位的研究成本
+修复了各种地图小问题
+修复了与 Java 8/32 位版本无法启动的兼容性问题
+修复了各种崩溃
+修复了玩家能够重建锁定的废弃方块的问题
+修复了小地图缩放时玩家名称的缩放问题
+修复本地游戏无法被发现的问题
+
+
+
+
+Build 147.1 (Beta)
+Added tooltips for additional information about difficulty modifiers
+Added experimental rule for RTS AI in Serpulo (likely to be buggy)
+Added logging for OpenGL errors
+Reduced research cost for various T1 unit factories and units on Serpulo
+Fixed various minor map issues
+Fixed compatibility with Java 8 / 32-bit version not launching
+Fixed various crashes
+Fixed player being able to rebuild locked derelict blocks
+Fixed player names in minimap scaling with zoom
+Fixed local games not being discoverable

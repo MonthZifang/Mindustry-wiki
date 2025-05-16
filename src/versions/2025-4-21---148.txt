@@ -1,0 +1,30 @@
+版本 148（测试版）
+修复科技树中的信息按钮不可点击的问题
+修复了 Scathe 的统计数据显示不正确的问题
+修复了液体运输块装满时爆炸性过强的问题
+修复了移动构建计划时总是将其移动到最前面的问题
+取消了 Plastanium 压缩机研究中对焦油田的要求
+针对起源地、海港和撤离前哨站的各种小地图修复
+增加了对使用 %[colorname] 逻辑命名颜色的支持
+添加了显示尺寸和绘制缓冲区大小的传感器
+添加了平铺逻辑显示块
+恢复桥梁成本增加
+将真菌通行证作为 T2 单位的要求
+重新平衡埃雷基尔炮塔弹药
+
+
+
+
+Build 148 (Beta)
+Fixed info button in tech tree not being clickable
+Fixed stats for Scathe not displaying correctly
+Fixed liquid transportation blocks being too explosive when full
+Fixed moving a build plan always moving it to the front
+Removed tar fields requirement for Plastanium Compressor research
+Various minor map fixes for Origin, Sea Port and Extraction Outpost
+Added support for named colors in logic with %[colorname]
+Added sensors for display size and draw buffer size
+Added tiled logic display block
+Reverted bridge cost increase
+Made Fungal Pass a requirement for T2 units
+Rebalancing of Erekir turret ammunition
