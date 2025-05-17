@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(100, 148, 237);
+    height: 40px;
+}
+
+.table1{
+    width: 140px;
+    border-collapse: collapse;
+    background-color: rgba(100, 237, 152, 1.0);
+    height: 40px;
+}
+.table1_ {
+    width: 100%-140px;
+    
+    height: 40px;
+    background-color: rgba(100, 237, 152, 0.5);
+}
+.table2{
+    width: 140px;
+    
+    background-color: rgb(119, 0, 255);
+    height: 40px;
+}
+.table2_ {
+    width: 100%-140px;
+    
+    height: 40px;
+    background-color: rgba(119, 0, 255, 0.5);
+}
+.table3{
+    width: 140px;
+    
+    background-color: rgba(255, 51, 0, 1.0);
+    height: 40px;
+}
+.table3_ {
+    width: 100%-140px;
+    
+    height: 40px;
+    background-color: rgba(255, 51, 0, 0.5);
+}

@@ -6,7 +6,7 @@
 class HeaderComponent extends HTMLElement {// 链接<app-header></app-header>，实现加载框架frame.html
   constructor() {
     super();
-    fetch('../frame.html')
+    fetch('/frame.html')
       .then(res => res.text())
       .then(html => this.innerHTML = html);
   }
