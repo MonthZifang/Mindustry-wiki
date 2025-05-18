@@ -13,7 +13,3 @@ class HeaderComponent extends HTMLElement {// 链接<app-header></app-header>，
 }
 customElements.define('app-header', HeaderComponent);
 
-/*document.getElementById('theme-toggle').addEventListener('click', function() {
-    document.body.classList.toggle('dark-theme');
-    document.body.classList.toggle('light-theme');
-  });*/

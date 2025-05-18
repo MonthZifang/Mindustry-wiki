@@ -1,0 +1,13 @@
+.item_box {
+  max-width: 300px;
+  margin: 150px auto 20px;
+  padding: 40px;
+  background: rgba(80, 80, 80, 0.74);
+  border: 1px solid #000000;
+  text-align: center;
+  font-family: Font;
+}
+.item_img {
+  width: 40px;
+  height: 40px;
+}
