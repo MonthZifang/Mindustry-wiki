@@ -12,31 +12,31 @@ conn = sqlite3.connect(
     database = "main.db",
     check_same_thread = False,
     )
-'''
-data.execute("""create table if not exists userdata (
+
+conn.execute("""create table if not exists userdata (
 id integer primary key autoincrement,
 username text,
 mail text,
 password text,
 permission text,
 reg_time text,
-token text
+token text,
 head_pic text)""")
-'''
+conn.commit()
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
-def hello_world():
-    return 'Hello, World!'
 
 @app.route('/api/user/login', methods=['POST'])
 def login():
     data = request.json  # 获取POST请求中的JSON数据
     username = data.get('username')
     password = data.get('password')
-    # ...
-    if(username == 'admin' and password == '12345'):
+
+
+    cursor = conn.execute('select * from userdata where username = ?', (username,))
+    user = cursor.fetchone()
+    if user and hashlib.sha1(password.encode()).hexdigest() == user[3]:  # assuming password is at index 3
         return jsonify(
             {
                 'status': 200,
@@ -44,13 +44,12 @@ def login():
                 'describe': 'Login successful',
                 'data': [
                     {
-                    'token': '00000000000000000000000000000000',
-                    'time': 3600
+                        'token': '0a4d55a8d778e5022fab701977c5d840bbc486d0',  # Replace with actual token generation logic
+                        'time': 3600
                     }
                 ]
             }
         )
-    
     return jsonify(
         {
             'status': -1,
@@ -108,6 +107,8 @@ def register():
 
 logger.info("启动服务器...")
 app.run(
+    host="0.0.0.0",
+    port=5000,
     debug=True
 )
 
