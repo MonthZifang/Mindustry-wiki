@@ -1,142 +1,17 @@
-/* ==================== 根变量 ==================== */
-:root {
-    --icon-size: 60px;               /* 默认图标大小 */
-    --icon-hover-scale: 1.5;         /* 悬停时缩放倍率 */
-    --transition-fast: 0.3s ease;    /* 快速过渡 */
-    --transition-slow: 0.5s ease;    /* 慢速过渡 */
-    --cell-height: 40px;             /* 表格行高 */
-    --container-max-width: 1200px;   /* 容器最大宽度 */
-  }
-  
-  /* ==================== 通用重置 ==================== */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: sans-serif;
-    line-height: 1.5;
-  }
-  
-  /* ==================== 表格容器 ==================== */
-  .unit-table-container {
-    position: absolute;
-    right: 1rem;                    /* 修正原 right:1 无效 */
-    bottom: 10vh;
-    width: 100%;
-    max-width: var(--container-max-width);
-    height: 600px;                  /* 固定高度，启用滚动 */
-    overflow-y: auto;
-    padding-right: 1rem;
-  }
-  
-  /* ==================== 表格基础 ==================== */
-  .unit-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  .unit-table th,
-  .unit-table td {
-    padding: 0.5rem;
-    text-align: left;
-    height: var(--cell-height);
-    line-height: var(--cell-height);
-  }
-  
-  /* “文字输出”那列 —— 可根据需求调整宽度 */
-  .unit-table .label-cell {
-    width: 15%;
-    padding-right: 1rem;
-    vertical-align: middle;
-  }
-  
-  /* 间隔单元格，保持空白 */
-  .spacing-cell {
-    width: 1rem;
-  }
-  
-  /* ==================== 图标 + 文字 布局 ==================== */
-  .icon-cell {
-    cursor: pointer;
-    text-align: center;
-    vertical-align: middle;
-  }
-  
-  /* a 标签包裹 icon + text */
-  .icon-cell .icon-text-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: inherit;
-    transition: transform var(--transition-fast);
-  }
-  
-  /* 图标 */
-  .icon-cell .table-icon {
-    width: var(--icon-size);
-    height: var(--icon-size);
-    transition: transform var(--transition-slow);
-  }
-  
-  /* 文字默认隐藏 */
-  .icon-cell .table-text {
-    display: none;
-    transition: transform var(--transition-fast), opacity var(--transition-fast);
-  }
-  
-  /* ==================== 悬停效果 ==================== */
-  .icon-cell:hover .table-icon {
-    transform: scale(var(--icon-hover-scale));
-  }
-  .icon-cell:hover .table-text {
-    display: inline-block;
-    transform: scale(var(--icon-hover-scale));
-    opacity: 1;
-  }
-  
-  /* ==================== 响应式适配 ==================== */
-  /* 中等屏幕：隐藏文字列，稍微调整右侧边距 */
-  @media (max-width: 1024px) {
-    .unit-table .label-cell {
-      display: none;
-    }
-    .unit-table-container {
-      right: 0.5rem;
-    }
-  }
-  
-  /* 小屏幕：表格改卡片式布局 */
-  @media (max-width: 767px) {
-    .unit-table {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .unit-table tr {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background: #f5f5f5;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    .unit-table td {
-      flex: 1 1 calc(50% - 1rem);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 0.5rem;
-    }
-    /* 缩小图标和文字 */
-    .icon-cell .table-icon {
-      width: calc(var(--icon-size) * 0.67);
-      height: calc(var(--icon-size) * 0.67);
-    }
-    .icon-cell .table-text {
-      font-size: 0.75rem;
-    }
-  }
-  
+
+.custom-link {
+  color: #007bff;          /* 链接颜色 */
+  text-decoration: none;   /* 去除下划线 */
+  display: inline-flex;     /* 弹性布局对齐图标和文字 */
+  align-items: center;      /* 垂直居中 */
+  gap: 5px;                /* 文字和图标间距 */
+}
+
+.custom-link:hover {
+  text-decoration: underline;  /* 悬停时显示下划线 */
+}
+
+.fa-external-link-alt {
+  font-size: 0.8em;        /* 图标大小 */
+  color: #666;             /* 图标颜色 */
+}
