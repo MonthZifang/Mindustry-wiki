@@ -1,0 +1,19 @@
+{
+    "ipHeader": {
+        "version": 1,
+        "headerLength": 20,
+        "totalLength": 49085,
+        "ttl": 101,
+        "protocol": 93,
+        "sourceIP": "171.32.115.117",
+        "destIP": "114.118.105.118"
+    },
+    "udpHeader": {
+        "sourcePort": 24940,
+        "destPort": 4676,
+        "length": 25958
+    },
+    "mindustryMessage": "d the Citadel\u0000\u0000\u0000\u0003\u0000\u0000\u0000\u0001\u0000\u0000\u0000�\bofficial\u0000\u0000\u0000\u0000\u0000\u0010I'm not dead yet\u0000\u0019�",
+    "serverDescription": "未找到服务器简介",
+    "update_time": "2025/05/31 22:47:35"
+}

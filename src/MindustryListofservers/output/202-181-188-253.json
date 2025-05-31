@@ -1,0 +1,19 @@
+{
+    "ipHeader": {
+        "version": 5,
+        "headerLength": 28,
+        "totalLength": 9008,
+        "ttl": 102,
+        "protocol": 93,
+        "sourceIP": "109.121.91.35",
+        "destIP": "54.101.55.48"
+    },
+    "udpHeader": {
+        "sourcePort": 26209,
+        "destPort": 24880,
+        "length": 12381
+    },
+    "mindustryMessage": "raine [#6e7080]> [#00cc66]Sur[#00ee88]vi[#00ffaa]val\u000bgen v1 mini\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000\u0000\u0000�\u000eUkrainianBuild\u0000\u0000\u0000\u0001�Z[#00cc66]⚠ > [#00ffaa]«Виживання»\n[#00cc66] > [#00ffaa]discord.gg/mP5PRC6ATp\n",
+    "serverDescription": "未找到服务器简介",
+    "update_time": "2025/05/31 22:47:35"
+}
