@@ -11,21 +11,100 @@
   <meta charset="UTF-8" />
   <title>Mindustry Wiki</title>
   <link rel="Mindustry Wiki" href="/src/image/icon.png" type="image/x-icon">
-  <link rel="stylesheet" href="/css/style.css"/>
-  <link rel="stylesheet" href="/css/item.css"/>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/item.css" />
 
 </head>
 
 <body>
   <app-header></app-header>
-  <div class="item_box">
-    <img src="/src/items/Antumbra.png" alt="Antumbra" class="item_img">
-    <h1>？？？</h1>
-    <hr style="border-top: 1px solid white; margin: 10px 0;">
-    <p></p>
+  <div class="describe_box">
+    <div class="item_box">
+      <div class="image-text-container">
+        <img src="/src/S-planet/Unit/Alpha.png" alt="Antumbra" class="item_img">
+        <h1>阿尔法</h1>
+      </div>
+
+      <hr style="border-top: 1px solid white; margin: 10px 0;">
+
+      <table border="1">
+        <tr>
+          <th>属性</th>
+          <th>值</th>
+        </tr>
+        <tr>
+          <td class="table1">类别</td>
+          <td class="table1_">己方单位</td>
+        </tr>
+        <tr>
+          <td class="table2">生命值</td>
+          <td class="table2_">150</td>
+        </tr>
+        <tr>
+          <td class="table3">护甲</td>
+          <td class="table3_">0</td>
+        </tr>
+        <tr>
+          <td class="table1">尺寸</td>
+          <td class="table1_">1 × 1</td>
+        </tr>
+        <tr>
+          <td class="table2">空中单位</td>
+          <td class="table2_">是</td>
+        </tr>
+        <tr>
+          <td class="table3">移动速度（格/秒）</td>
+          <td class="table3_">22.5</td>
+        </tr>
+        <tr>
+          <td class="table1">建造速度（%）</td>
+          <td class="table1_">50</td>
+        </tr>
+        <tr>
+          <td class="table2">采矿速度（%）</td>
+          <td class="table2_">650</td>
+        </tr>
+        <tr>
+          <td class="table3">可采集矿物</td>
+          <td class="table3_">铜 铅 废料</td>
+        </tr>
+        <tr>
+          <td class="table1">物品容量（个）</td>
+          <td class="table1_">30</td>
+        </tr>
+        <tr>
+          <td class="table2">武器</td>
+          <td class="table2_">
+            开火速率：2 × 1.76 / 秒<br>
+            伤害：11<br>
+            注：对建筑伤害 -99%
+          </td>
+        </tr>
+        <tr>
+          <td class="table3">攻击范围（格）</td>
+          <td class="table3_">18</td>
+        </tr>
+      </table>
+    </div>
+      <div class="output" id="output"></div>
   </div>
 
+
+
   <script src="/js/script.js"></script>
+  <script src="/js/marked.js"></script>
+  <script>
+  fetch('/README.md')
+    .then(res => res.text())
+    .then(text => {
+      output.innerHTML = marked.parse(text);  // 解析并显示 Markdown
+    })
+    .catch(error => {
+      console.error('Error loading README.md:', error);
+      output.innerHTML = '<p>Error loading content</p>';
+    });
+</script>
+
 </body>
 
 </html>

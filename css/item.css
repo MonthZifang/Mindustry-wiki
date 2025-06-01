@@ -1,13 +1,67 @@
+
+.describe_box {
+  margin: 80px 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.74);
+  
+  text-align: left;
+  font-family: Font;
+  color: #000000;
+  vertical-align: middle;
+  min-width: 0;  /* 防止内容溢出 */
+}
+
 .item_box {
   max-width: 300px;
-  margin: 150px auto 20px;
-  padding: 40px;
+  padding: 20px;
   background: rgba(80, 80, 80, 0.74);
   border: 1px solid #000000;
-  text-align: center;
+  text-align: left;
   font-family: Font;
+  color: #ffffff;
+  min-width: 0;  /* 防止内容溢出 */
+
+  float: right;          /* 向左浮动 */
+  margin-right: 20px;   /* 与右侧文本的间距 */
+  margin-bottom: 20px;  /* 与下方文本的间距 */
+  width: 300px;        /* 固定宽度（可选） */
 }
+
 .item_img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+}
+
+.image-text-container { /* 图片和文字的容器，使图片和文字在同一行 */
+  display: flex; /* 使用flex布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 20px; /* 图片和文字之间的间距 */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 60px;
+  font-size: 14px;
+}
+.table1 {
+  width: 100px;
+  border-collapse: collapse;
+}
+.table1_ {
+  width: 100%-100px;
+}
+.table2 {
+  width: 100px;
+}
+.table2_ {
+  width: 100%-100px;
+}
+.table3 {
+  width: 100px;
+}
+.table3_ {
+  width: 100%-100px;
 }

@@ -97,6 +97,12 @@ body::before {
   height: 60px;
   background: rgba(0, 0, 0, 0.8);
   font-family: Font;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* 确保标题栏在其他内容之上 */
+  
 }
 
 /* 标题 */

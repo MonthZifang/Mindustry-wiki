@@ -1,3 +1,9 @@
+<!-- ==========================================================
+                  html框架，对item介绍提供支持 
+                  禁止乱动，否则会导致网站错误！
+=============================================================== -->
+
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -5,44 +11,67 @@
   <meta charset="UTF-8" />
   <title>Mindustry Wiki</title>
   <link rel="Mindustry Wiki" href="/src/image/icon.png" type="image/x-icon">
-  <link rel="stylesheet" href="/css/blocks_index.css" />
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/css/item.css"/>
+
 </head>
 
 <body>
   <app-header></app-header>
+  <div class="item_box">
+    <div class="image-text-container">
+      <img src="/src/S-planet/Unit/Alpha.png" alt="Antumbra" class="item_img">
+      <h1>阿尔法</h1>
+    </div>
 
-  <!-- 内容 -->
-  <div class="content-container">
-    <h1>Mindustry 方块物品列表</h1>
+    <hr style="border-top: 1px solid white; margin: 10px 0;">
+
     <table border="1">
       <tr>
-        <th>方块</th>
+        <th>属性</th>
+        <th>值</th>
       </tr>
       <tr>
-        <table>
-          <tr>
-            <td class="table1">11</td>
-            <td class="table1_">11</td>
-            <td class="table1_">11</td>
-          </tr>
-          <tr>
-            <td class="table2">11</td>
-            <td class="table2_">11</td>
-          </tr>
-          <tr>
-            <td class="table3">11</td>
-            <td class="table3_">11</td>
-          </tr>
-    </table>
+        <td class="table1">类别</td>
+        <td class="table1_">己方单位</td>
+      </tr>
+      <tr>
+        <td class="table2">血量</td>
+        <td class="table2_">150</td>
+      </tr>        
+      <tr>
+        <td class="table3">护甲</td>
+        <td class="table3_">0</td>
+      </tr>
+      <tr>
+        <td class="table1">类别</td>
+        <td class="table1_">己方单位</td>
+      </tr>
+      <tr>
+        <td class="table2">血量</td>
+        <td class="table2_">150</td>
+      </tr>        
+      <tr>
+        <td class="table3">护甲</td>
+        <td class="table3_">0</td>
+      </tr>
+      <tr>
+        <td class="table1">类别</td>
+        <td class="table1_">己方单位</td>
+      </tr>
+      <tr>
+        <td class="table2">血量</td>
+        <td class="table2_">150</td>
+      </tr>        
+      <tr>
+        <td class="table3">护甲</td>
+        <td class="table3_">0</td>
       </tr>
     </table>
   </div>
+  
 
   <script src="/js/script.js"></script>
-  <!-- 在此处添加覆盖框架的样式 -->
-  <!--<link rel="stylesheet" href="../css/About.css">-->
-
-
 </body>
 
 </html>
