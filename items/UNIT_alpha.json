@@ -13,7 +13,7 @@
     "info": {
         "health": 150,
         "armor": 0,
-        "size": "1×1",
+        "size": "1 × 1",
         "fly": true,
         "speed": 22.5,
         "build_speed": 50,
@@ -33,6 +33,7 @@
                     "zh": "-99.0% 对建筑伤害"
                 }
             },
+            "range": 18.2,
             "attacking": {
                 "airborne_unit": true,
                 "ground_unit": true

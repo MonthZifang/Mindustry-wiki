@@ -1,5 +1,81 @@
+/*
 fetch('http://example.com/data.txt')
   .then(response => response.text())
   .then(data => console.log(data))
   .catch(error => console.log(error));
 // ...........................
+*/
+
+const urlParams = new URLSearchParams(window.location.search); // 获取网址后参数
+const id = urlParams.get("id");
+
+console.log(id);
+
+if (id == null) { // 没有参数
+  output.innerHTML = "<p>网址错误！请确认你是否是通过页面链接进入该网页！</p>";
+  console.error("网址错误！请确认你是否是通过页面链接进入该网页！");
+} else { // 有参数
+  fetch("/items/" + id + ".md") // 获取 Markdown 文件 ###未作安全处理！###
+    .then((res) => res.text())
+    .then((text) => {
+      output.innerHTML = marked.parse(text); // 解析并显示 Markdown
+    })
+    .catch((error) => {
+      console.error("Error loading README.md:", error);
+      output.innerHTML = "<p>抱歉，数据加载失败...请尝试刷新网页。</p>";
+    });
+  
+  fetch("/items/" + id + ".json") // 获取 JSON 文件 ###未作安全处理！###
+    .then((res) => res.text())
+    .then((text) => {
+      const obj = JSON.parse(text);
+      console.log(obj.name.zh);
+      
+      if (obj.type == "UNIT"){
+        document.getElementById("type").textContent = '单位';
+      }
+      document.getElementById("health").textContent = obj.info.health;
+
+      document.getElementById("armor").textContent = obj.info.armor;
+
+      document.getElementById("size").textContent = obj.info.size;
+
+      if (obj.info.fly == true){
+        document.getElementById("fly").textContent = "是";
+      } else {
+        document.getElementById("fly").textContent = "否";
+      }
+
+      document.getElementById("speed").textContent = obj.info.speed;
+
+      document.getElementById("build_speed").textContent = obj.info.build_speed;
+
+      document.getElementById("mining_speed").textContent = obj.info.mining_speed;
+      // ........................................................................从此处继续
+      document.getElementById("").textContent = obj.info.health;// 可采集矿物...
+
+      document.getElementById("item_capacity").textContent = obj.info.item_capacity;
+
+      document.getElementById("weapons").textContent = obj.info.health;
+      
+      document.getElementById("range").textContent = obj.info.health;
+
+      if (obj.info.weapons.attacking.airborne_unit == true){
+        document.getElementById("airborne_unit").textContent = "是";
+      } else {
+        document.getElementById("airborne_unit").textContent = "否";
+      }
+
+      if (obj.info.weapons.attacking.ground_unit == true){
+        document.getElementById("ground_unit").textContent = "是";
+      } else {
+        document.getElementById("ground_unit").textContent = "否";
+      }
+      
+
+    })
+    .catch((error) => {
+      console.error("Error loading README.md:", error);
+      output.innerHTML = "<p>抱歉，数据加载失败...请尝试刷新网页。</p>";
+    });
+}
