@@ -1,2 +1,0 @@
-# Mindustry-wiki
-Mindustry-wiki

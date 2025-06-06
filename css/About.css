@@ -9,7 +9,7 @@ body::before {
   height: 100%;
 
   background-color: #000000; /* 默认背景颜色为黑色 */
-  background-image: url('/src/image/backgrounds/4.png');
+  background-image: url('/src/backgrounds/4.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

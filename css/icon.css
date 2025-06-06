@@ -1,0 +1,35 @@
+.icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .icon::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('/src/datas/items/item-scrap.png');  /* ✅ 图标路径 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 6px;
+  }
+
+
+
+  .icon1 {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .icon1::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('/src/datas/items/item-scrap.png');  /* ✅ 图标路径 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 6px;
+  }

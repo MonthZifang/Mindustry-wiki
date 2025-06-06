@@ -27,6 +27,7 @@ if (id == null) { // 没有参数
         .then((res) => res.text())
         .then((text) => {
           output.innerHTML = marked.parse(text); // 解析并显示 Markdown
+          console.log("/items/units/" + obj.describe + ".md");
         })
         .catch((error) => {
           console.error("Error loading README.md:", error);
@@ -55,9 +56,10 @@ if (id == null) { // 没有参数
       document.getElementById("mining_speed").textContent = obj.info.mining_speed;
       
 
-      var collectable_minerals;
+      var collectable_minerals = "";
       for (var i = 0; i < obj.info.collectable_mineral; i++){
-        collectable_minerals = collectable_minerals + obj.info.collectable_minerals[i - 1];// .................................... BUG ................................
+        collectable_minerals = collectable_minerals + obj.info.collectable_minerals[i];
+        // .................................... BUG ................................
       }
       document.getElementById("collectable_minerals").textContent = collectable_minerals;
 
