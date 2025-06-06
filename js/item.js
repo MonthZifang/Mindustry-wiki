@@ -15,22 +15,24 @@ if (id == null) { // 没有参数
   output.innerHTML = "<p>网址错误！请确认你是否是通过页面链接进入该网页！</p>";
   console.error("网址错误！请确认你是否是通过页面链接进入该网页！");
 } else { // 有参数
-  fetch("/items/" + id + ".md") // 获取 Markdown 文件 ###未作安全处理！###
-    .then((res) => res.text())
-    .then((text) => {
-      output.innerHTML = marked.parse(text); // 解析并显示 Markdown
-    })
-    .catch((error) => {
-      console.error("Error loading README.md:", error);
-      output.innerHTML = "<p>抱歉，数据加载失败...请尝试刷新网页。</p>";
-    });
   
-  fetch("/items/" + id + ".json") // 获取 JSON 文件 ###未作安全处理！###
+  
+  fetch("/items/units/" + id + ".json") // 获取 JSON 文件 ###未作安全处理！###
     .then((res) => res.text())
     .then((text) => {
       const obj = JSON.parse(text);
       console.log(obj.name.zh);
       
+      fetch("/items/units/" + obj.describe + ".md") // 获取 Markdown 文件 ###未作安全处理！###
+        .then((res) => res.text())
+        .then((text) => {
+          output.innerHTML = marked.parse(text); // 解析并显示 Markdown
+        })
+        .catch((error) => {
+          console.error("Error loading README.md:", error);
+          output.innerHTML = "<p>抱歉，数据加载失败...请尝试刷新网页。</p>";
+        });
+
       if (obj.type == "UNIT"){
         document.getElementById("type").textContent = '单位';
       }
@@ -51,14 +53,20 @@ if (id == null) { // 没有参数
       document.getElementById("build_speed").textContent = obj.info.build_speed;
 
       document.getElementById("mining_speed").textContent = obj.info.mining_speed;
-      // ........................................................................从此处继续
-      document.getElementById("").textContent = obj.info.health;// 可采集矿物...
+      
+
+      var collectable_minerals;
+      for (var i = 0; i < obj.info.collectable_mineral; i++){
+        collectable_minerals = collectable_minerals + obj.info.collectable_minerals[i - 1];// .................................... BUG ................................
+      }
+      document.getElementById("collectable_minerals").textContent = collectable_minerals;
 
       document.getElementById("item_capacity").textContent = obj.info.item_capacity;
 
-      document.getElementById("weapons").textContent = obj.info.health;
-      
-      document.getElementById("range").textContent = obj.info.health;
+      document.getElementById("weapons").innerHTML = "开火速率：" + obj.info.weapons.fire_rate + " / 秒<br>伤害：" + obj.info.weapons.injuries + "<br>" + obj.info.weapons.notes.zh;
+      console.log("开火速率：" + obj.info.weapons.fire_rate + " / 秒\n伤害：" + obj.info.weapons.injuries + "\n" + obj.info.weapons.notes.zh);
+
+      document.getElementById("range").textContent = obj.info.weapons.range;
 
       if (obj.info.weapons.attacking.airborne_unit == true){
         document.getElementById("airborne_unit").textContent = "是";
