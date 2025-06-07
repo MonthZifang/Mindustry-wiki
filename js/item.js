@@ -17,7 +17,7 @@ if (id == null) { // 没有参数
 } else { // 有参数
   
   
-  fetch("/items/units/" + id + ".json") // 获取 JSON 文件 ###未作安全处理！###
+  fetch("/items/units/" + id + ".json") // 获取 JSON 文件并替换数据 ###未作安全处理！###
     .then((res) => res.text())
     .then((text) => {
       const obj = JSON.parse(text);
@@ -34,7 +34,8 @@ if (id == null) { // 没有参数
           output.innerHTML = "<p>抱歉，数据加载失败...请尝试刷新网页。</p>";
         });
 
-      if (obj.type == "UNIT"){
+      
+      if (obj.type == "unit"){
         document.getElementById("type").textContent = '单位';
       }
       document.getElementById("health").textContent = obj.info.health;
