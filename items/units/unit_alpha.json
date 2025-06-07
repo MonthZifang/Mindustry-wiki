@@ -1,5 +1,5 @@
 {
-  "type": "unit",
+  "type": "unit_friendly",
   "id": "unit_alpha",
   "pic": "Alpha.png",
   "name": {
