@@ -1,0 +1,40 @@
+版本 149（测试版）
+修复了与寻路相关的各种错误
+修复了地图编辑器崩溃的问题
+修复了海军部队在寻路时波浪式忽略墙壁的问题
+修复了 RTS AI 在许多情况下无限建造单位的问题
+修复了游戏关闭时战役不保存波形状态的问题
+修复超速状态无法保存的问题
+改进了服务器上基于单位的导弹的视觉插值
+对埃雷基尔电源块和炮塔进行了许多不同的平衡变化
+增加了硅冶炼厂完成冰冻森林的要求
+在按键绑定对话框中添加了搜索栏
+为模组添加了一个新系统来注册他们自己的按键绑定（使用原始按键绑定的现有模组将会失效）
+为具有采矿能力的单位添加了手动选择矿石的方法
+为 Pulsar/Quasar 添加了挖矿命令功能
+增加了物品桥的物品吞吐量统计数据
+在逻辑处理器上添加了重置按钮
+允许选择/命令受逻辑处理器约束的单元
+选定的单位现在显示所有可用的姿态/命令，即使它们并未在所有单位之间共享
+
+
+
+
+Build 149 (Beta)
+Fixed various errors related to pathfinding
+Fixed a map editor crash
+Fixed naval units in waves ignoring walls when pathfinding
+Fixed RTS AI building up units infinitely in many cases
+Fixed campaign not saving wave state when game is closed
+Fixed overdrive state not saving
+Improved visual interpolation of unit-based missiles on servers
+Many various balancing changes to Erekir power blocks and turrets
+Added Frozen Forest completion requirement to silicon smelter
+Added a search bar to the keybind dialog
+Added a new system for mods to register their own keybinds (existing mods utilizing vanilla keybinds will break)
+Added a way to manually select ores for units with mining capabilities
+Added mining command capabilities to Pulsar/Quasar
+Added stats for item throughput for item bridges
+Added a reset button to logic processors
+Allowed selecting/commanding units that are bound by logic processors
+Selected units now display all available stances/commands, even if they are not shared across all units

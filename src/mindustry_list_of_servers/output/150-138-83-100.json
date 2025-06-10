@@ -1,0 +1,19 @@
+{
+    "ipHeader": {
+        "version": 3,
+        "headerLength": 8,
+        "totalLength": 17230,
+        "ttl": 121,
+        "protocol": 93,
+        "sourceIP": "174.230.179.189",
+        "destIP": "91.93.124.32"
+    },
+    "udpHeader": {
+        "sourcePort": 31069,
+        "destPort": 58814,
+        "length": 44774
+    },
+    "mindustryMessage": "[]| [yellow] QQ交流群 10443350578[回档103][回档100]我们一起挖⚡沙⚡子⚡V1.4\u0000\u0000\u0000\t\u0000\u0000\u0000N\u0000\u0000\u0000�\nMindustryX\u0000\u0000\u0000\u0000\u00003全服在线 [gold]15[] | 房间数 [gold]2[]\u0000\u0019�",
+    "serverDescription": "未找到服务器简介",
+    "update_time": "2025/05/31 22:47:35"
+}

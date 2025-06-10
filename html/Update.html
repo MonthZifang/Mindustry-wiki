@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mindustry Wiki</title>
+  
+  <link rel="Mindustry Wiki" href="/src/image/icon.png" type="image/x-icon">
+
+</head>
+<body>
+  <!-- 自定义组件需要 JavaScript 支持 -->
+  <app-header></app-header>
+
+  <!-- 内容容器需要设置 z-index -->
+  <div class="content-container">
+    <!-- 建议添加语义化标题 -->
+    <h1>Mindustry Wiki</h1>
+    
+    <!-- 版本列表建议使用列表结构 -->
+    <p>Mindustry 游戏更新日志</p>
+    <!-- 注意：重复的 147.1 版本链接 -->
+    <a href="../src/versions/2025-5-1---149.txt" class="contact-link">149</a>
+    <a href="../src/versions/2025-4-21---148.txt" class="contact-link">148</a>
+    <a href="../src/versions/2025-4-14---147.1.txt" class="contact-link">147.1</a>
+    <a href="../src/versions/2025-4-14---147.1.txt" class="contact-link">147.1</a> <!-- 重复项 -->
+    <a href="../src/versions/2023-9-4--146.txt" class="contact-link">146</a>
+    <a href="../src/versions/2023-6-20--145.txt" class="contact-link">145</a>
+    
+    <!-- 建议修改为：
+    <ul class="version-list">
+      <li><a href="..." class="version-link">149 - 2025/5/1</a></li>
+      ... 
+    </ul> -->
+  </div>
+
+  <!-- 脚本位置正确 -->
+  <script src="/js/script.js"></script>
+  
+  <div class="Aboutpng"></div>
+</body>
+</html>

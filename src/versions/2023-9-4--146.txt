@@ -1,0 +1,64 @@
+内部版本 146
+修复了单位和区块成本乘数规则的各种问题
+修复了许多不同的崩溃
+修复了各种成就不触发的问题
+修复了寻路无法穿过实心敌怪方块的问题
+修复了海军单位有时试图在陆地上寻路的问题
+修复了具有太空背景的水图格导致黑色背景的问题
+修复了内部遗留块是逻辑常量的问题
+修复了 power node 双击导致交互速率限制触发的问题
+修复了单位有时无法杀死的问题
+具有长路径的固定单位有时会永远重新计算
+修复了玩家单位在某些有水坑的地图中出现错误的严重问题
+修复了 Neoplasia 反应堆有时不会爆炸的问题
+修复了单位在击中角落时随机死亡的问题
+修复了穿透子弹过早地击中子弹“下方”的方块的问题
+修复了导弹对单位造成双倍伤害的漏洞
+修复了 FPS 无法准确限制的问题
+添加了禁用所有照明的设置
+添加了 logic unit autoPathfind 命令（默认波形寻路）
+将 logic unbind 命令设置为 '@unit' 为 null
+使“任何”环境都可以在沙盒之外访问
+使推车装载机不再接受推车卸载机的输入
+添加了盾牌、内容 ID（与查找命令相反）的逻辑传感器
+添加了 logic particle 效果指令
+新增逻辑同步指令
+设置出厂输出点现在会更新“上次访问”
+在沙盒/PvP 之外的多人游戏中禁用了团队切换菜单
+略微降低了帆布块硅的成本
+重击弹药消耗量降低至 15
+强化的 Precept 单位
+
+
+
+
+Build 146
+Fixed a variety of issues with unit & block cost multiplier rules
+Fixed many various crashes
+Fixed various achievements not triggering
+Fixed pathfinding not being able to path through solid enemy blocks
+Fixed naval units sometimes attempting to pathfind through land
+Fixed water tiles with space background resulting in a black background
+Fixed internal legacy blocks being logic constants
+Fixed power node double-click leading to interaction rate limit triggering
+Fixed units sometimes being unkillable
+Fixed units with long paths sometimes recalculating forever
+Fixed serious issue with player units getting bugged in certain maps with puddles
+Fixed Neoplasia reactor sometimes not exploding
+Fixed units randomly dying when hitting corners
+Fixed piercing bullets permaturely hitting blocks "under" bullets
+Fixed missiles dealing double damage to units
+Fixed FPS not limiting accurately
+Added setting to disable all lighting
+Added logic unit autoPathfind command (default wave pathfinding)
+Made logic unbind command set `@unit` to null
+Made "any" environment accessible outside of sandbox
+Made payload loaders no longer accept inputs from payload unloaders
+Added logic sensors for shields, content ID (inverse of lookup command)
+Added logic particle effect instruction
+Added logic sync instruction
+Setting factory output points now updates "last accessed"
+Disabled team switching menu in multiplayer outside of sandbox/PvP
+Decreased canvas block silicon cost slightly
+Scathe ammo usage decreased to 15
+Buffed Precept unit

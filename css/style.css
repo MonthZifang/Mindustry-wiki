@@ -1,0 +1,219 @@
+/* ========================================================== 
+                css框架，对框架样式提供支持
+                禁止乱动，否则会导致网站错误！
+========================================================== */
+
+
+
+/* ================= 通用布局样式 ================= */
+.ya {
+  display: flex;
+  flex-direction: column;
+  /* 垂直排列子元素 */
+  align-items: center;
+  /* 水平居中 */
+  justify-content: center;
+  /* 垂直居中（需要容器有固定高度时生效） */
+  text-align: center;
+  /* 文本居中 */
+}
+
+/* ================= 文字排版样式 ================= */
+.title {
+  margin-bottom: 20px;
+  /* 标题底部留白 */
+}
+
+.text {
+  width: 45%;
+  /* 限制文本区域宽度 */
+  margin: 10px 0;
+  /* 上下边距 */
+}
+
+/* 右对齐文本区块 */
+.left {
+  text-align: right;
+  /* 文本右对齐 */
+  margin-right: auto;
+  /* 通过自动边距实现区块右对齐 */
+}
+
+/* 左对齐文本区块 */
+.right {
+  text-align: left;
+  /* 文本左对齐 */
+  margin-left: auto;
+  /* 通过自动边距实现区块左对齐 */
+}
+
+
+/* ———————————————————————————————————————————————————— 主样式 ———————————————————————————————————————————————————— */
+@font-face {
+  font-family: Font;
+  src: url(/src/font/font.woff);
+}
+
+
+/* ——— 页面样式 ——— */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /*
+  background-image: url('/src/image/background.webp'); 
+  background-size: cover;
+  */
+  color: #ffffff;
+  /* 设置默认文字颜色为白色 */
+}
+
+/* 背景 */
+body::before {
+  content: '';
+  position: fixed;
+  /* 固定定位覆盖整个视口 */
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #000000;
+  /* 默认背景颜色为黑色 */
+  background-image: url('/src/backgrounds/1.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+  filter: blur(5px);
+  z-index: -1;
+  /* 将背景层置于底层 */
+}
+
+/* ——— 顶部栏 ——— */
+.top-bar {
+  position: relative;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  font-family: Font;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* 确保标题栏在其他内容之上 */
+  
+}
+
+/* 标题 */
+.title {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Font;
+}
+
+/* 导航链接组 */
+.nav-links {
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+/* 导航项 */
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  display: block;
+}
+
+/* 下拉菜单容器 */
+.dropdown {
+  position: relative;
+}
+
+/* 隐藏的下拉内容 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0px);
+  left: 0;
+  background: #363636;
+  border-radius: 4px;
+  padding: 8px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 100px;
+  z-index: 10;
+}
+
+/* 下拉链接 */
+.dropdown-content a {
+  color: #fff;
+  padding: 6px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 悬停或焦点时显示下拉内容 */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* ——— 内容区 ——— */
+/* 主内容容器 */
+.content-container {
+  max-width: 80%;
+  margin: 150px auto 20px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  text-align: center;
+  font-family: Font;
+}
+
+/* 子内容容器 */
+.content-container2 {
+  max-width: 80%;
+  margin: 20px auto 20px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  text-align: left;
+  font-family: Font;
+}
+
+.contact-link {
+  color: #2fcfff;
+}
+
+/* ——— 特殊设定 ——— */
+
+/* 下载链接 */
+.download-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0092be;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #1a9dbd;
+  }
+}
