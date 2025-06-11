@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mindustry Wiki</title>
+  <link rel="stylesheet" href="/css/organization.css">
+  <link rel="icon" href="/src/image/icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+  <!-- 左侧图标区域 -->
+  <div class="grid">
+    <a class="Jump" href="pages/brew.html" data-info="酿造是制作药水的过程，常用于战斗和增强。">
+      <img src="icons/brew.png "alt="111">
+      <span>111</span>
+    </a>
+
+    <a class="Jump" href="pages/command.html" data-info="爬虫，是一个常见的单位，用于战斗，通过爆炸方式来进行攻击，造价便宜伤害高，深受那些爬虫老喜爱。">
+      <img src=" ../../../../src/datas/0.未分类/S-planet/Unit/T1/crawler/unit-crawler-ui.png  "alt="爬虫">
+      <span>爬虫</span>
+    </a>
+    
+    <!-- 更多项目可以继续添加 -->
+  </div>
+
+  <!-- 悬浮简介浮窗 -->
+  <div class="tooltip" id="tooltip">
+    <button class="close-btn" id="closeBtn">✕</button>
+    <div id="tooltipContent"></div>
+  </div>
+
+  <!-- 页面组件与脚本 -->
+  <app-header></app-header>
+
+  <script src="/js/organization.js"></script>
+  <script src="/js/script.js"></script>
+
+</body>
+</html>

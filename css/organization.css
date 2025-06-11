@@ -1,0 +1,144 @@
+/* 页面基础设置 */
+body {
+  background: #e0e0e0;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 80px 0 40px 0;
+}
+
+
+/* 左侧图标区域 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 12px;
+  justify-items: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 0 16px 16px 0;
+  padding: 16px;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  width: 30vw;
+  min-width: 320px;
+  max-width: 400px;
+  position: relative;
+  left: 0;
+}
+
+/* 图标元素 */
+.Jump {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.Jump:hover {
+  transform: scale(1.05);
+}
+
+.Jump img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 6px;
+}
+
+.Jump span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 右侧浮窗简介 */
+.tooltip {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 260px;
+  background: white;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  z-index: 999;
+
+  /* 初始隐藏 */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: all 0.4s ease;
+}
+
+/* 弹出时显示 */
+.tooltip.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* 关闭时隐藏：右侧滑出屏幕 */
+.tooltip.hide {
+  right: -280px;
+}
+
+/* 弹出时位置 */
+.tooltip.show {
+  right: 20px;  /* 距离右侧20px，可根据需要调整 */
+}
+
+
+/* 关闭按钮 */
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+body {
+  background: url("/src/backgrounds/8.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 80px 0 40px 0; /* 顶部为导航栏预留空间 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
