@@ -39,7 +39,7 @@
   .item_img-1 {
     width: 200px;                     /* 图片宽度 */
     height: 200px;                    /* 图片高度，必须指定 */
-    background-image: url('/src/datas/0.未分类/S-planet/Unit/Player/unit-alpha-ui.png');
+    background-image: url('/src/datas/Star/S-planet/Unit/Player/unit-alpha-ui.png');
     background-size: contain;         /* 图片缩放保持比例填满容器 */
     background-repeat: no-repeat;    /* 不重复 */
     background-position: center;     /* 居中显示 */
