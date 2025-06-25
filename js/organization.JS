@@ -10,7 +10,7 @@ let hideTimer = null;  // 控制移开隐藏
 tooltip.classList.add("hide");
 
 // 加载 Font.json 并填充 data-info
-fetch('/js/Font.json')
+fetch('./Font.json')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
