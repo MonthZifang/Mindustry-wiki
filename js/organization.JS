@@ -10,7 +10,7 @@ let hideTimer = null;  // 控制移开隐藏
 tooltip.classList.add("hide");
 
 // 加载 Font.json 并填充 data-info
-fetch('./Font.json')
+fetch('/items/units/unit_describe.json')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -28,7 +28,7 @@ fetch('./Font.json')
       }
     });
   })
-  .catch(error => console.error("加载 Font.json 时出错:", error));
+  .catch(error => console.error("加载 单位描述文件(unit_describe.json) 时出错:", error));
 
 // 悬浮事件
 items.forEach(item => {
