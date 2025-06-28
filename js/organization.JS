@@ -42,7 +42,7 @@ items.forEach(item => {
       tooltipContent.innerText = info; // 设置浮窗内容
       tooltip.classList.remove("hide");
       tooltip.classList.add("show");
-    }, 2000); // 延迟 2 秒显示浮窗
+    }, 500); // 延迟 2 秒显示浮窗
   });
 
   item.addEventListener("mouseleave", () => {
@@ -53,17 +53,17 @@ items.forEach(item => {
     hideTimer = setTimeout(() => {
       tooltip.classList.remove("show");
       tooltip.classList.add("hide");
-    }, 1500); // 延迟 1.5 秒隐藏浮窗
+    }, 500); // 延迟 1.5 秒隐藏浮窗
   });
 });
 
 // 点击关闭按钮立即隐藏浮窗
-closeBtn.addEventListener("click", () => {
+/*closeBtn.addEventListener("click", () => {
   clearTimeout(hoverTimer);
   clearTimeout(hideTimer);
   tooltip.classList.remove("show");
   tooltip.classList.add("hide");
-});
+});*/
 
 // 点击窗口外部立即隐藏浮窗
 document.addEventListener("click", (e) => {

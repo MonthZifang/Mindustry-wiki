@@ -16,14 +16,15 @@ body {
   align-items: center;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.25);
-  border-radius: 0 16px 16px 0;
+  border-radius: 16px;
   padding: 16px;
-  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   width: 30vw;
   min-width: 320px;
-  max-width: 520px;
-  position: relative;
-  left: 0;
+  max-width: 6000px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* 图标元素 */
@@ -43,13 +44,13 @@ body {
 }
 
 .Jump img {
-  width: 32px;
-  height: 32px;
-  margin-bottom: 6px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
 }
 
 .Jump span {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
   color: #333;
 }
@@ -57,7 +58,7 @@ body {
 /* 浮窗样式 */
 .tooltip {
   position: fixed;
-  top: 20%; /* 固定在屏幕顶部 20% */
+  top: 10%; /* 固定在屏幕顶部 20% */
   right: 0; /* 紧贴屏幕右边边框 */
   width: 300px;
   background: white;
@@ -119,5 +120,4 @@ body {
   margin: 0;
   padding: 80px 0 40px 0; /* 顶部为导航栏预留空间 */
 }
-
 
