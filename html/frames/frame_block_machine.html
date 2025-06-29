@@ -1,0 +1,117 @@
+<!-- ==========================================================
+                  html框架，对 机器方块 介绍提供支持 
+                  禁止乱动，否则会导致网站错误！
+=============================================================== -->
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mindustry Wiki</title>
+  <link rel="Mindustry Wiki" href="/src/image/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/item.css" />
+
+</head>
+
+<body>
+  <app-header></app-header>
+  <!-- 固定右侧目录 -->
+  <aside class="toc">
+    <aside class="toc-fixed">
+      <strong>目录</strong>
+      <ul id="list">
+        <li><a href="#[NULL]">[NULL]</a></li>
+
+      </ul>
+    </aside>
+  </aside>
+  <div class="describe_box">
+    <div class="item_box">
+      <div class="image-text-container">
+        <img src="" alt="[NULL]" class="item_img" id="pic">
+        <h1 id="name">[NULL]</h1>
+      </div>
+
+      <hr style="border-top: 2px solid rgb(0, 0, 0); margin: 10px 0;">
+
+      <table border="1">
+        <colgroup>
+          <col style="width: 125px"> <!-- 第一列 -->
+          <col style="width: calc(100%-125px)">
+        </colgroup>
+        <theaad>
+          <tr>
+            <th>属性</th>
+            <th>值</th>
+          </tr>
+          <tr>
+            <td class="table1">用途</td>
+            <td class="table1_" id="type">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table2">生命值</td>
+            <td class="table2_" id="health">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table1">尺寸</td>
+            <td class="table1_" id="size">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table2">建造时间</td>
+            <td class="table2_" id="fly">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table3">建造花费</td>
+            <td class="table3_" id="speed">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table2">消耗电力</td>
+            <td class="table2_" id="weapons">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table3">液体容量</td>
+            <td class="table3_" id="range">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table1">物品容量</td>
+            <td class="table1_" id="build_speed">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table2">输入</td>
+            <td class="table2_" id="mining_speed">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table3">输出</td>
+            <td class="table3_" id="collectable_minerals">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table1">输入输出---生产时间</td>
+            <td class="table1_" id="item_capacity">[NULL]</td>
+          </tr>
+          <tr>
+            <td class="table1">最高效率</td>
+            <td class="table1_" id="item_capacity">[NULL]</td>
+          </tr>
+        </theaad>
+      </table>
+    </div>
+    <div class="output" id="output"></div>
+
+
+  </div>
+
+
+
+  <script src="/js/item.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/marked.js"></script>
+  <script>
+
+  </script>
+
+</body>
+
+</html>

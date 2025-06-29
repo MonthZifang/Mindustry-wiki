@@ -1,5 +1,6 @@
 {
   "type": "unit_friendly",
+  "build": 0,
   "id": "unit_gamma",
   "pic": "Gamma.png",
   "name": {
