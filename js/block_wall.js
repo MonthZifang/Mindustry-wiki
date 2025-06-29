@@ -15,7 +15,7 @@ if (id == null) {
     .then((text) => {
       const obj = JSON.parse(text);
       console.log(obj.name.zh);
-      if (obj.type == "block_machine") {
+      if (obj.type == "block_wall") {
         fetch("/items/blocks/" + obj.describe + ".md") // 获取 Markdown 文件 ###未作安全处理！###
           .then((res) => res.text())
           .then((text) => {
@@ -32,7 +32,7 @@ if (id == null) {
         document.getElementById("pic").src = "/src/datas/buildings/" + obj.pic; // 图片
         document.getElementById("pic").alt = "/src/datas/buildings/" + obj.pic;
         document.getElementById("name").textContent = obj.name.zh; // 名字
-        document.getElementById("type").textContent = "机器方块";
+        document.getElementById("type").textContent = "城墙方块";
         document.getElementById("notes").textContent = obj.notes.zh;
         document.getElementById("health").textContent = obj.info.health;
         document.getElementById("size").textContent = obj.info.size;
@@ -43,27 +43,8 @@ if (id == null) {
         }
         document.getElementById("build_uses").textContent = build_uses;
 
-        document.getElementById("use_electronic").textContent =
-          obj.info.use_electronic;
-        document.getElementById("liquid_capacity").textContent =
-          obj.info.liquid_capacity;
-        document.getElementById("item_capacity").textContent =
-          obj.info.item_capacity;
 
-        var inputs = "";
-        for (var i = 0; i < obj.info.input; i++) {
-          inputs = inputs + obj.info.inputs[i];
-        }
-        document.getElementById("inputs").textContent = inputs;
-        var outputs = "";
-        for (var i = 0; i < obj.info.output; i++) {
-          outputs = outputs + obj.info.outputs[i];
-        }
-        document.getElementById("outputs").textContent = outputs;
-
-        document.getElementById("production_time").textContent =
-          obj.info.production_time;
-        document.getElementById("max_speed").textContent = obj.info.max_speed;
+        document.getElementById("different").textContent = obj.info.different.zh;
         // END   数据替换
       }
     })

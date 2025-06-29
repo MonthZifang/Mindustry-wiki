@@ -1,0 +1,22 @@
+{
+  "type": "block_wall",
+  "id": "block_copper_wall",
+  "pic": "block-copper-wall-ui.png",
+  "name": {
+    "zh": "铜墙"
+  },
+  "notes": {
+      "zh": "保护初代核心，可建造建筑"
+  },
+  "info": {
+    "health": 150,
+    "size": "1 × 1",
+    "build_time": 50,
+    "build_use": 0,
+    "build_uses": [],
+    "different": {
+      "zh": ""
+    }
+  },
+  "describe": "block_graphite_press"
+}
