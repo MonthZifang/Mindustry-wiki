@@ -1,43 +1,43 @@
 {
   "type": "unit_friendly",
-  "id": "unit_beta",
-  "pic": "Beta.png",
+  "id": "unit_gamma",
+  "pic": "Gamma.png",
   "name": {
-    "zh": "贝塔"
+    "zh": "伽马"
   },
   "notes": {
     "value": 1,
     "1": {
-      "zh": "保护次代核心，可建造建筑"
+      "zh": "保护终代核心，可建造建筑"
     }
   },
   "info": {
-    "health": 170,
+    "health": 220,
     "armor": 0,
-    "size": "1.12 × 1.12",
+    "size": "1.37 × 1.37",
     "fly": true,
-    "speed": 24.75,
-    "build_speed": 75,
-    "mining_speed": 700,
+    "speed": 26.62,
+    "build_speed": 100,
+    "mining_speed": 800,
     "collectable_mineral": 3,
     "collectable_minerals": [
       "ITEM_copper",
       "ITEM_lead",
       "ITEM_waste"
     ],
-    "item_capacity": 50,
+    "item_capacity": 70,
     "weapons": {
-      "fire_rate": "2 × 2 × 1.5",
+      "fire_rate": "2 × 2 × 2",
       "injuries": 11,
       "notes": {
         "zh": "-99.0% 对建筑伤害"
       },
-      "range": 22,
+      "range": 30,
       "attacking": {
         "airborne_unit": true,
         "ground_unit": true
       }
     }
   },
-  "describe": "unit_beta"
+  "describe": "unit_gamma"
 }

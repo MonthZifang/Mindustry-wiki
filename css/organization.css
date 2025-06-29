@@ -16,15 +16,28 @@ body {
   align-items: center;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.25);
-  border-radius: 16px;
+  border-radius: 0 16px 16px 0;
   padding: 16px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
   width: 30vw;
   min-width: 320px;
-  max-width: 6000px;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  max-width: 520px;
+  position: relative;
+  left: 0;
+  align-items: end;
+}
+
+.name {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 10px;
+  
 }
 
 /* 图标元素 */
@@ -58,7 +71,7 @@ body {
 /* 浮窗样式 */
 .tooltip {
   position: fixed;
-  top: 10%; /* 固定在屏幕顶部 20% */
+  top: 20%; /* 固定在屏幕顶部 20% */
   right: 0; /* 紧贴屏幕右边边框 */
   width: 300px;
   background: white;
@@ -113,11 +126,12 @@ body {
 
 
 
-body {
+body::before {
   background: url("/src/backgrounds/8.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: sans-serif;
   margin: 0;
   padding: 80px 0 40px 0; /* 顶部为导航栏预留空间 */
 }
+
 
