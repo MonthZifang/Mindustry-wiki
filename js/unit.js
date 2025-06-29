@@ -40,6 +40,17 @@ if (id == null) {
       document.getElementById("health").textContent = obj.info.health;
       document.getElementById("armor").textContent = obj.info.armor;
       document.getElementById("size").textContent = obj.info.size;
+      if (obj.info.build_use == 0) {
+        document.getElementById("build_uses").textContent = "-----无需建造-----";
+      } else {
+        var build_uses = "";
+        for (var i = 0; i < obj.info.build_use; i++) {
+        build_uses = build_uses + obj.info.build_uses[i];
+        }
+        document.getElementById("build_uses").textContent = build_uses;
+      }
+
+      
       if (obj.info.fly == true) {
         document.getElementById("fly").textContent = "是";
       } else {
@@ -47,32 +58,20 @@ if (id == null) {
       }
       document.getElementById("speed").textContent = obj.info.speed;
       document.getElementById("build_speed").textContent = obj.info.build_speed;
-      document.getElementById("mining_speed").textContent =
-        obj.info.mining_speed;
+      document.getElementById("mining_speed").textContent = obj.info.mining_speed;
       var collectable_minerals = "";
-      for (var i = 0; i < obj.info.collectable_mineral; i++) {
-        collectable_minerals =
-          collectable_minerals + obj.info.collectable_minerals[i];
+      if (obj.info.collectable_mineral == 0) {
+        document.getElementById("collectable_minerals").textContent = "-----无法采集-----";
+      } else {
+        for (var i = 0; i < obj.info.collectable_mineral; i++) {
+          collectable_minerals = collectable_minerals + obj.info.collectable_minerals[i];
+        }
+        document.getElementById("collectable_minerals").textContent = collectable_minerals;
       }
-      document.getElementById("collectable_minerals").textContent =
-        collectable_minerals;
-      document.getElementById("item_capacity").textContent =
-        obj.info.item_capacity;
-      document.getElementById("weapons").innerHTML =
-        "开火速率：" +
-        obj.info.weapons.fire_rate +
-        " / 秒<br>伤害：" +
-        obj.info.weapons.injuries +
-        "<br>" +
-        obj.info.weapons.notes.zh;
-      console.log(
-        "开火速率：" +
-          obj.info.weapons.fire_rate +
-          " / 秒\n伤害：" +
-          obj.info.weapons.injuries +
-          "\n" +
-          obj.info.weapons.notes.zh
-      );
+      
+      document.getElementById("item_capacity").textContent = obj.info.item_capacity;
+      document.getElementById("weapons").innerHTML = "开火速率：" + obj.info.weapons.fire_rate + " / 秒<br>伤害：" + obj.info.weapons.injuries + "<br>" + obj.info.weapons.notes.zh;
+      console.log( "开火速率：" + obj.info.weapons.fire_rate + " / 秒\n伤害：" + obj.info.weapons.injuries + "\n" + obj.info.weapons.notes.zh);
       document.getElementById("range").textContent = obj.info.weapons.range;
       if (obj.info.weapons.attacking.airborne_unit == true) {
         document.getElementById("airborne_unit").textContent = "是";
