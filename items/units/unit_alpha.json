@@ -17,11 +17,16 @@
     "armor": 0,
     "size": "1 × 1",
     "build_use": 0,
-    "build_uses": [],
+    "build_uses1": [],
+    "build_uses2": [],
     "fly": true,
     "speed": 22.5,
+    "fast": false,
     "build_speed": 50,
     "mining_speed": 650,
+    "different": {
+      "zh": ""
+    },
     "collectable_mineral": 3,
     "collectable_minerals": [
       "ITEM_copper",

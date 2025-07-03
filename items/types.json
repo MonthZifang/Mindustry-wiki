@@ -1,0 +1,8 @@
+{
+    "unit_alpha": "unit_friendly",
+    "unit_beta": "unit_friendly",
+    "unit_gamma": "unit_friendly",
+
+    "block_copper_wall": "block_wall",
+    "block_graphite_press": "block_machine"
+}
