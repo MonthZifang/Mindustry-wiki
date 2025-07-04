@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonthCloud 方便快捷的建站工具</title>
+    <link rel="stylesheet" href="css/fas.css">
+    <style>
+        /* 页面基础样式 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6); /* 设置背景透明度 */
+            color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 99999;
+        }
+
+        /* 导航栏内容样式 */
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #4c7fee; /* 鼠标悬停时颜色变化 */
+        }
+
+        .navbar img {
+            left: 5px;
+            top: 5px;
+            width: 25px;
+            height: 25px;
+
+        }
+
+        .navbar h2 {
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            text-align: left;
+        }
+
+        /* 内容区域样式 */
+        .content {
+            margin-top: 70px; /* 防止内容被导航栏遮挡 */
+            text-align: center;
+            color: rgb(131, 179, 224);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <ul>
+            <img src="/src/favicon.ico"></img>
+            <h2>MonthCloud</h2>
+            <li><a href="/" class="id1">首页</a></li>
+            <li><a href="/server.html" class="id2">服务器选购</a></li>
+            <li><a href="/about.html">关于与反馈</a></li>
+            <li><a href="/callus.html">联系我们</a></li>
+            <li><a href="/login.html">注册与登录</a></li>
+            <!--
+            <li><a href="https://github.com/MonthZifang">git?</a></li>
+            <li><a href="../存储分享/存储分享.zip">拉取html css文件</a></li>
+            -->
+        </ul>
+    </div>
+    <!-- 内容 -->
+    <div class="content">
+        <p class="id1 id1-px">或许有你喜欢的</p>
+        <p class="id2 id1-px">或许有你喜欢的22</p>
+    </div>
+</body>
+</html>

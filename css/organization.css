@@ -19,9 +19,9 @@ body {
   border-radius: 0 16px 16px 0;
   padding: 16px;
   box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
-  width: 30vw;
-  min-width: 320px;
-  max-width: 520px;
+  width: 40vw;         /* 限制1：宽度=视口宽度的 */
+  min-width: 320px;    /* 限制2：最小宽度 */
+  max-width: 5020px;   /* 左侧图标区域 */
   position: relative;
   left: 0;
   align-items: end;
