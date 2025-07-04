@@ -101,7 +101,7 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* 确保标题栏在其他内容之上 */
+  z-index: 99999; /* 确保标题栏在其他内容之上 */
   
 }
 
@@ -117,9 +117,9 @@ body::before {
 
 /* 导航链接组 */
 .nav-links {
-  position: absolute;
+  position: relative;
   top: 15px;
-  right: 50px;
+  right: -250px;
   display: flex;
   gap: 20px;
 }
@@ -216,4 +216,35 @@ body::before {
   &:hover {
     background-color: #1a9dbd;
   }
+}
+
+.login-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.language-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 120px;
+  display: flex;
+  gap: 20px;
+}
+
+.language {
+  height: 20px;
+  width: 30px;
 }
