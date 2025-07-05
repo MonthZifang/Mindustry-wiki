@@ -4,18 +4,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #e6f7ff 0%, #f0f8ff 100%);
   padding: 20px;
-  position: relative;
-  overflow: hidden;
 }
 
 /* 注册容器样式 */
@@ -30,16 +25,21 @@ body {
   backdrop-filter: blur(5px);
   border: 1px solid rgba(24, 144, 255, 0.1);
   animation: fadeInUp 0.8s ease-out;
+
+  margin: 80px 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
 }
 
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(30px);
+    opacity: 0;
+    transform: translateY(30px);
   }
+
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -60,7 +60,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
   transform: rotate(30deg);
 }
 
@@ -69,7 +69,7 @@ body {
   font-weight: 700;
   margin-bottom: 8px;
   position: relative;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .registration-header p {
@@ -86,36 +86,67 @@ body {
 }
 
 .form-group {
-  margin-bottom: 22px;
+  margin-bottom: 10px;
   position: relative;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
   font-weight: 500;
   color: #262626;
-  font-size: 15px;
+  font-size: 13px;
   display: flex;
   align-items: center;
 }
 
 /* 自定义图标 */
-.icon-user::before { content: "👤"; margin-right: 10px; }
-.icon-email::before { content: "✉️"; margin-right: 10px; }
-.icon-lock::before { content: "🔒"; margin-right: 10px; }
-.icon-refresh::before { content: "🔄"; margin-right: 10px; }
-.icon-shield::before { content: "🔑"; margin-right: 10px; }
-.icon-cloud::before { content: "☁️"; margin-right: 8px; }
-.icon-success::before { content: "✅"; margin-right: 8px; }
-.icon-login::before { content: "↪️"; margin-right: 5px; }
+.icon-user::before {
+  content: "👤";
+  margin-right: 10px;
+}
+
+.icon-email::before {
+  content: "✉️";
+  margin-right: 10px;
+}
+
+.icon-lock::before {
+  content: "🔒";
+  margin-right: 10px;
+}
+
+.icon-refresh::before {
+  content: "🔄";
+  margin-right: 10px;
+}
+
+.icon-shield::before {
+  content: "🔑";
+  margin-right: 10px;
+}
+
+.icon-cloud::before {
+  content: "☁️";
+  margin-right: 8px;
+}
+
+.icon-success::before {
+  content: "✅";
+  margin-right: 8px;
+}
+
+.icon-login::before {
+  content: "↪️";
+  margin-right: 5px;
+}
 
 .form-group input {
   width: 100%;
-  padding: 15px 20px;
+  padding: 10px 10px;
   border: 1px solid #d9d9d9;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 7px;
+  font-size: 12px;
   transition: all 0.3s;
   background: #f9fcff;
 }
@@ -147,16 +178,17 @@ body {
 
 .verification-btn {
   width: 140px;
-  padding: 15px 10px;
+  padding: 7px 7px;
   background: #1890ff;
   border: none;
-  border-radius: 10px;
+  border-radius: 7px;
   color: white;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
-  margin-top: 30px;
+  margin-top: 22px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -175,17 +207,13 @@ body {
 
 .terms {
   display: flex;
+  gap: 6px;
+  border-radius: 7px;
   align-items: flex-start;
-  gap: 10px;
-  margin: 25px 0;
-  padding: 15px;
-  background: #f0faff;
-  border-radius: 10px;
-  border: 1px solid #e6f7ff;
 }
 
 .terms input {
-  margin-top: 4px;
+  margin-top: 5.5px;
   accent-color: #1890ff;
 }
 
@@ -208,16 +236,16 @@ body {
 
 .submit-btn {
   width: 100%;
-  padding: 16px;
+  padding: 12px;
   background: linear-gradient(to right, #1890ff, #52c41a);
   border: none;
-  border-radius: 10px;
+  border-radius: 7px;
   color: white;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
-  margin: 10px 0 20px;
+  margin: 10px 0 0px;
   box-shadow: 0 6px 15px rgba(24, 144, 255, 0.35);
   position: relative;
   overflow: hidden;
@@ -230,7 +258,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.1);
   transform: rotate(30deg);
   transition: all 0.6s;
   opacity: 0;
@@ -251,21 +279,21 @@ body {
   transform: translateY(0);
 }
 
-.login-link {
+.login-link2 {
   text-align: center;
   color: #595959;
   font-size: 15px;
   padding: 10px;
 }
 
-.login-link a {
+.login-link2 a {
   color: #1890ff;
   text-decoration: none;
   font-weight: 600;
   margin-left: 5px;
 }
 
-.login-link a:hover {
+.login-link2 a:hover {
   text-decoration: underline;
 }
 
@@ -280,7 +308,6 @@ body {
 
 .input-error {
   border-color: #f5222d !important;
-  background-color: #fff2f0;
 }
 
 .input-error:focus {
@@ -298,70 +325,42 @@ body {
   color: #52c41a;
   font-weight: 500;
   animation: fadeIn 0.5s;
+  
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* 云朵背景样式 */
-.cloud-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.cloud {
-  position: absolute;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 0 50px rgba(255, 255, 255, 0.9);
-  filter: blur(1px);
-}
-
-.cloud:nth-child(1) {
-  width: 200px;
-  height: 70px;
-  top: 10%;
-  left: 5%;
-  animation: float 25s infinite linear;
-}
-
-.cloud:nth-child(2) {
-  width: 250px;
-  height: 80px;
-  top: 30%;
-  right: 10%;
-  animation: float 30s infinite linear reverse;
-}
-
-.cloud:nth-child(3) {
-  width: 180px;
-  height: 60px;
-  bottom: 20%;
-  left: 20%;
-  animation: float 35s infinite linear;
-}
-
-.cloud:nth-child(4) {
-  width: 300px;
-  height: 100px;
-  bottom: 10%;
-  right: 5%;
-  animation: float 40s infinite linear reverse;
-}
 
 @keyframes float {
-  0% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(20px) translateY(-10px); }
-  50% { transform: translateX(0) translateY(0); }
-  75% { transform: translateX(-20px) translateY(10px); }
-  100% { transform: translateX(0) translateY(0); }
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(20px) translateY(-10px);
+  }
+
+  50% {
+    transform: translateX(0) translateY(0);
+  }
+
+  75% {
+    transform: translateX(-20px) translateY(10px);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
 }
 
 /* 密码强度指示器 */
@@ -385,35 +384,33 @@ body {
 .password-strength-text {
   font-size: 12px;
   color: #8c8c8c;
-  margin-top: 5px;
-  text-align: right;
 }
 
 /* 响应式设计 */
 @media (max-width: 500px) {
   .registration-container {
-      border-radius: 12px;
+    border-radius: 12px;
   }
-  
+
   .registration-header {
-      padding: 22px 20px;
+    padding: 22px 20px;
   }
-  
+
   .registration-header h1 {
-      font-size: 24px;
+    font-size: 24px;
   }
-  
+
   .registration-form {
-      padding: 25px 20px;
+    padding: 25px 20px;
   }
-  
+
   .verification-container {
-      flex-direction: column;
+    flex-direction: column;
   }
-  
+
   .verification-btn {
-      width: 100%;
-      margin-top: 0;
-      margin-bottom: 15px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
 }

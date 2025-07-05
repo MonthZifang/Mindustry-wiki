@@ -71,7 +71,7 @@
   position: sticky;
   top: 100px;
 
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 12px;
   backdrop-filter: blur(10px);
@@ -125,7 +125,7 @@
 
 .glass-panel {
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   width: 80%;          /* 宽度为容器的 80% */
   height: 450px;       /* 高度固定为 400px */
@@ -158,7 +158,7 @@
   /* 没有设置高度，元素高度由内容撑开 */
 
   background: rgba(255, 255, 255, 0.1);  /* 半透明白色背景 */
-  border: 1px solid rgba(255, 255, 255, 0.2);  /* 半透明白色边框，宽度1像素 */
+  border: 1px solid rgba(255, 255, 255, 0.6);  /* 半透明白色边框，宽度1像素 */
   
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* 阴影效果：水平偏移0，垂直偏移4px，模糊10px，颜色半透明黑 */
   border-radius: 16px;           /* 边角圆润，半径16像素 */

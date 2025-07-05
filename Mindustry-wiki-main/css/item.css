@@ -3,7 +3,7 @@
   margin: 80px 20px;
   padding: 20px;
   
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.6);
   text-align: left;
   font-family: Font;
   color: #000000;
@@ -87,7 +87,7 @@ table {
   overflow-y: auto;
   position: fixed;
 
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 12px;
   backdrop-filter: blur(10px);
