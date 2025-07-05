@@ -1,104 +1,94 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mindustry Wiki</title>
-  <script src="/js/jquery-3.7.1.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindustry-wiki</title>
+    <link rel="icon" href="../src/icon.ico" type="image/x-icon">
 </head>
-
 <body>
-  <app-header></app-header>
-  <!-- 中央内容 -->
-  <div class="content">
-    <div class="regisite">
-      <div class="regisite_div">
-
-        <h2 style="text-align: center;">注册</h2>
-        <br>
-
-        <div class="form-container">
-          <form action="/" method="post">
-            <!-- 注册 -->
-            <div class="form-group">
-              <label for="username">用户名：</label>
-              <input type="text" id="username" name="username">
-            </div>
-
-            <div class="form-group">
-              <label for="password">密码：</label>
-              <input type="password" id="password" name="password">
-            </div>
-
-            <div class="form-group">
-              <label for="email">邮箱：</label>
-              <input type="email" id="email" name="email">
-              <input type="button" value="获取验证码">
-            </div>
-
-            <div class="form-group">
-              <label for="captcha">验证码：</label>
-              <input type="text" id="captcha" name="captcha">
-            </div>
-
-            <div class="agreement">
-              <input type="checkbox" id="xieyi" name="xieyi">
-              <span></span>
-              <label for="xieyi">是否同意</label>
-              <a id="xieyi_click">Mindustry Wiki用户协议</a>
-            </div>
-
-            <div class="login-link">
-              <a href="/login.html">已有账户？登录</a>
-            </div>
-            <br>
-
-            <input type="submit" value="注册" class="submit-btn">
-          </form>
-        </div>
-
-        <dialog id="error_reg" class="error_reg">
-          <h2 id="error_reg_h2">错误</h2>
-          <p id="error_reg_info">请填写所有字段并同意用户协议。</p>
-          <button onclick="error_reg.close()">关闭</button>
-        </dialog>
-
-        <dialog id="xieyi_dialog" class="error_reg">
-          <h2 id="error_reg_h2">Mindustry Wiki 用户协议</h2>
-          <p>修订时间：xxxx年xx月xx日 xx:xx</p>
-          <p>............................</p>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <button onclick="xieyi.close()">关闭</button>
-        </dialog>
-        <script src="/js/regisite.js"></script>
-
-        <script>
-          const xieyi = document.getElementById("xieyi_dialog");
-          $(document).ready(function () {
-            $("#xieyi_click").click(function () {
-              xieyi.showModal()
-              //$(this).hide();
-            });
-          });
-        </script>
-      </div>
+    <!-- 背景云朵 -->
+    <div class="cloud-bg">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
     </div>
-
-  </div>
-
-  <!-- 留空的外部脚本，未来可添加 JS 逻辑 -->
-  <script src="/js/script.js"></script>
-  <script src="/js/regisite.js"></script>
-  <link rel="stylesheet" href="/css/login.css">
-
+    
+    <!-- 注册表单容器 -->
+    <div class="registration-container">
+        <div class="registration-header">
+            <h1>注册WIKI账号</h1>
+            <p>注册WIKI账号，为社区环境添加美好</p>
+        </div>
+        
+        <div class="registration-form">
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="username"><i class="icon-user"></i> 用户名</label>
+                    <input type="text" id="username" placeholder="请输入用户账户(2-22个字符)">
+                    <div class="input-hint">用户名长度在2-22个字符之间</div>
+                    <div class="error" id="usernameError">用户名长度必须在2-22个字符之间</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email"><i class="icon-email"></i> 电子邮箱</label>
+                    <input type="email" id="email" placeholder="请输入您的电子邮箱">
+                    <div class="input-hint">用于账号验证和密码找回</div>
+                    <div class="error" id="emailError">请输入有效的电子邮箱地址</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password"><i class="icon-lock"></i> 密码</label>
+                    <input type="password" id="password" placeholder="请输入密码(6-22个字符)">
+                    <div class="input-hint">密码长度在6-22个字符之间</div>
+                    <div class="password-strength">
+                        <div class="strength-meter" id="strengthMeter"></div>
+                    </div>
+                    <div class="password-strength-text" id="strengthText">密码强度：弱</div>
+                    <div class="error" id="passwordError">密码长度必须在6-22个字符之间</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword"><i class="icon-refresh"></i> 确认密码</label>
+                    <input type="password" id="confirmPassword" placeholder="请再次输入密码">
+                    <div class="error" id="confirmPasswordError">两次输入的密码不一致</div>
+                </div>
+                
+                <div class="verification-container">
+                    <div class="form-group">
+                        <label for="verificationCode"><i class="icon-shield"></i> 验证码</label>
+                        <input type="text" id="verificationCode" placeholder="请输入6位验证码">
+                        <div class="error" id="verificationError">请输入6位验证码</div>
+                    </div>
+                    
+                    <button type="button" class="verification-btn" id="sendCodeBtn">
+                        发送验证码
+                    </button>
+                </div>
+                
+                <div class="terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">提交请求并接受<a href="#">服务条款</a>和<a href="#">隐私政策</a></label>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="icon-cloud"></i> 立即注册
+                </button>
+                
+                <div class="success-message" id="successMessage">
+                    <i class="icon-success"></i> 注册成功！欢迎加入雨云平台
+                </div>
+            </form>
+            
+            <div class="login-link">
+                已有账号？<a href="#"><i class="icon-login"></i> 立即登录</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/login.js"></script>
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
 </body>
-
 </html>

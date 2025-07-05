@@ -1,0 +1,36 @@
+{
+  "type": "block_machine",
+  "id": "block_graphite_press",
+  "pic": "block-graphite-press-ui.png",
+  "name": {
+    "zh": "石墨压缩机"
+  },
+  "notes": {
+      "zh": "保护初代核心，可建造建筑"
+  },
+  "info": {
+    "health": 150,
+    "size": "1 × 1",
+    "build_time": 50,
+    "build_use": 0,
+    "build_uses": [],
+    "use_electronic": 22.5,
+    "liquid_capacity": 0,
+    "item_capacity": 650,
+    "input": 3,
+    "inputs": [
+      "ITEM_copper",
+      "ITEM_lead",
+      "ITEM_waste"
+    ],
+    "output": 3,
+    "outputs": [
+      "ITEM_copper",
+      "ITEM_lead",
+      "ITEM_waste"
+    ],
+    "production_time": 0,
+    "max_speed": 100
+  },
+  "describe": "block_graphite_press"
+}

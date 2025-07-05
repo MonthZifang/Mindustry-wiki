@@ -1,0 +1,7 @@
+{
+    "units": [
+        "ITEM_copper",
+        "ITEM_lead",
+        "ITEM_waste"
+    ]
+}

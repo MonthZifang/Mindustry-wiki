@@ -1,0 +1,17 @@
+
+.custom-link {
+  color: #007bff;          /* 链接颜色 */
+  text-decoration: none;   /* 去除下划线 */
+  display: inline-flex;     /* 弹性布局对齐图标和文字 */
+  align-items: center;      /* 垂直居中 */
+  gap: 5px;                /* 文字和图标间距 */
+}
+
+.custom-link:hover {
+  text-decoration: underline;  /* 悬停时显示下划线 */
+}
+
+.fa-external-link-alt {
+  font-size: 0.8em;        /* 图标大小 */
+  color: #666;             /* 图标颜色 */
+}

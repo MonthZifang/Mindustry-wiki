@@ -1,0 +1,51 @@
+{
+  "type": "unit_friendly",
+  "build": 0,
+  "id": "unit_alpha",
+  "pic": "Alpha.png",
+  "name": {
+    "zh": "阿尔法"
+  },
+  "notes": {
+    "value": 1,
+    "1": {
+      "zh": "保护初代核心，可建造建筑"
+    }
+  },
+  "info": {
+    "health": 150,
+    "armor": 0,
+    "size": "1 × 1",
+    "build_use": 0,
+    "build_uses1": [],
+    "build_uses2": [],
+    "fly": true,
+    "speed": 22.5,
+    "fast": false,
+    "build_speed": 50,
+    "mining_speed": 650,
+    "different": {
+      "zh": ""
+    },
+    "collectable_mineral": 3,
+    "collectable_minerals": [
+      "ITEM_copper",
+      "ITEM_lead",
+      "ITEM_waste"
+    ],
+    "item_capacity": 30,
+    "weapons": {
+      "fire_rate": "2 × 1.76",
+      "injuries": 11,
+      "notes": {
+        "zh": "-99.0% 对建筑伤害"
+      },
+      "range": 18.2,
+      "attacking": {
+        "airborne_unit": true,
+        "ground_unit": true
+      }
+    }
+  },
+  "describe": "unit_alpha"
+}

@@ -1,0 +1,133 @@
+
+.describe_box {
+  margin: 80px 20px;
+  padding: 20px;
+  
+  background: rgba(255, 255, 255, 0.2);
+  text-align: left;
+  font-family: Font;
+  color: #000000;
+  vertical-align: middle;
+  min-width: 0;  /* 防止内容溢出 */
+
+  position: relative; /* 或absolute/fixed */
+  left: 300px; /* 调整为你需要的值 */
+
+  max-width: min(calc(100vw - 400px), calc(100vw - 400px));
+  min-height: 800px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+
+  backdrop-filter: blur(10px);
+}
+
+
+.item_box {
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.493);
+  border: 1px solid #000000;
+  text-align: left;
+  font-family: Font;
+  color: #000000;
+  min-width: 0;  /* 防止内容溢出 */
+
+  float: right;          /* 向左浮动 */
+  margin-bottom: 20px;  /* 与下方文本的间距 */
+  width: 300px;        /* 固定宽度（可选） */
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+
+  backdrop-filter: blur(10px);
+
+  
+}
+
+.item_img {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+}
+
+.image-text-container { /* 图片和文字的容器，使图片和文字在同一行 */
+  display: flex; /* 使用flex布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 20px; /* 图片和文字之间的间距 */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 60px;
+  font-size: 14px;
+  table-layout: fixed;
+  word-break: break-word;
+}
+
+
+
+/* 目录整体容器 */
+.toc {
+  position: absolute;
+  left: 20px;
+  top: 80px;
+
+  display: flex;
+}
+
+
+
+/* 固定左侧目录栏 */
+.toc-fixed {
+  width: 240px;
+  
+  overflow-y: auto;
+  position: fixed;
+
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  color: #fff;
+  padding: 20px;
+  z-index: 10;
+}
+
+.toc-fixed strong,
+.toc-fixed a {
+  color: black;
+}
+
+
+/* 目录文字样式 */
+.toc strong {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin-bottom: 10px;
+}
+
+.toc a {
+  color: #005bbb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}

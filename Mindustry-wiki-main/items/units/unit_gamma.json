@@ -1,0 +1,44 @@
+{
+  "type": "unit_friendly",
+  "build": 0,
+  "id": "unit_gamma",
+  "pic": "Gamma.png",
+  "name": {
+    "zh": "伽马"
+  },
+  "notes": {
+    "value": 1,
+    "1": {
+      "zh": "保护终代核心，可建造建筑"
+    }
+  },
+  "info": {
+    "health": 220,
+    "armor": 0,
+    "size": "1.37 × 1.37",
+    "fly": true,
+    "speed": 26.62,
+    "build_speed": 100,
+    "mining_speed": 800,
+    "collectable_mineral": 3,
+    "collectable_minerals": [
+      "ITEM_copper",
+      "ITEM_lead",
+      "ITEM_waste"
+    ],
+    "item_capacity": 70,
+    "weapons": {
+      "fire_rate": "2 × 2 × 2",
+      "injuries": 11,
+      "notes": {
+        "zh": "-99.0% 对建筑伤害"
+      },
+      "range": 30,
+      "attacking": {
+        "airborne_unit": true,
+        "ground_unit": true
+      }
+    }
+  },
+  "describe": "unit_gamma"
+}

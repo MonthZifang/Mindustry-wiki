@@ -1,0 +1,435 @@
+:root {
+  --align-percentage: 5%;
+  --container-height: 50vh;
+}
+
+/* 总容器横向排布 */
+.wiki-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+/* 顶部图标 + 名称区域 */
+.item_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: var(--container-height);
+  position: relative;
+}
+
+/* 图标和名称位置控制 */
+.image-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: var(--align-percentage);
+  z-index: 2;
+  transition: margin-left 0.3s ease;
+}
+
+.item_img {
+  width: 120px;
+  height: auto;
+}
+
+#name {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  color: #2c3e50;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 内容和目录横向排布 */
+.content_box {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 主正文区域，右侧预留空间 */
+.main_content {
+  flex: 1;
+  padding: 20px;
+  margin-right: 260px; /* 给右边目录腾出空间 */
+  box-sizing: border-box;
+    color: #000000; /* 或者直接写 color: black; */
+  }
+
+/* 目录整体容器 */
+.toc {
+  position: absolute;
+  right: 20px;
+  top: 100px;
+}
+
+/* 固定右侧目录栏 */
+.toc-fixed {
+  width: 240px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 100px;
+
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  color: #fff;
+  padding: 20px;
+  z-index: 10;
+}
+
+.toc-fixed strong,
+.toc-fixed a {
+  color: black;
+}
+
+/* 目录文字样式 */
+.toc strong {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin-bottom: 10px;
+}
+
+.toc a {
+  color: #005bbb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* 主要内容文字那亚克力板 */
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 80%;          /* 宽度为容器的 80% */
+  height: 450px;       /* 高度固定为 400px */
+  max-width: 1500px;    /* 防止太宽 */
+
+
+
+
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* 阴影更深，立体感更强 */
+}
+
+
+
+
+
+
+
+
+
+.alpha-intro {
+  position: absolute;              /* 绝对定位，脱离文档流 */
+  top: 400px;                     /* 元素顶部距离父容器顶部600像素，可微调定位 */
+  right: 20px;                    /* 元素右边距离父容器右边20像素，可微调定位 */
+
+  width: 250px;                   /* 元素宽度为250像素 */
+  /* 没有设置高度，元素高度由内容撑开 */
+
+  background: rgba(255, 255, 255, 0.1);  /* 半透明白色背景 */
+  border: 1px solid rgba(255, 255, 255, 0.2);  /* 半透明白色边框，宽度1像素 */
+  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* 阴影效果：水平偏移0，垂直偏移4px，模糊10px，颜色半透明黑 */
+  border-radius: 16px;           /* 边角圆润，半径16像素 */
+  padding: 16px;                 /* 内边距16像素，内容与边框的距离 */
+  color: #070000;                /* 文字颜色，接近黑色 */
+
+  backdrop-filter: blur(12px);           /* 背景模糊效果，模糊半径12px */
+  -webkit-backdrop-filter: blur(12px);  /* Safari浏览器兼容写法 */
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* 另一层更强的阴影，覆盖前面的阴影 */
+  
+  font-size: 14px;               /* 字体大小14像素 */
+  line-height: 1.6;             /* 行高为字体大小的1.6倍，增加可读性 */
+  
+  z-index: 99;                  /* 层叠顺序99，保证该元素浮在其他元素上面 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 物品图标 */
+.contact {
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+  display: inline-flex;
+  align-items: center; /* 垂直居中图标和文字 */
+}
+
+
+
+
+
+
+
+/* ================= 通用布局样式 ================= */
+.ya {
+  display: flex;
+  flex-direction: column;
+  /* 垂直排列子元素 */
+  align-items: center;
+  /* 水平居中 */
+  justify-content: center;
+  /* 垂直居中（需要容器有固定高度时生效） */
+  text-align: center;
+  /* 文本居中 */
+}
+
+/* ================= 文字排版样式 ================= */
+.title {
+  margin-bottom: 20px;
+  /* 标题底部留白 */
+}
+
+.text {
+  width: 45%;
+  /* 限制文本区域宽度 */
+  margin: 10px 0;
+  /* 上下边距 */
+}
+
+/* 右对齐文本区块 */
+.left {
+  text-align: right;
+  /* 文本右对齐 */
+  margin-right: auto;
+  /* 通过自动边距实现区块右对齐 */
+}
+
+/* 左对齐文本区块 */
+.right {
+  text-align: left;
+  /* 文本左对齐 */
+  margin-left: auto;
+  /* 通过自动边距实现区块左对齐 */
+}
+
+
+/* ———————————————————————————————————————————————————— 主样式 ———————————————————————————————————————————————————— */
+@font-face {
+  font-family: Font;
+  src: url(/src/font/font.woff);
+}
+
+
+/* ——— 页面样式 ——— */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /*
+  background-image: url('/src/image/background.webp'); 
+  background-size: cover;
+  */
+  color: #ffffff;
+  /* 设置默认文字颜色为白色 */
+}
+
+/* 背景 */
+body::before {
+  content: '';
+  position: fixed;
+  /* 固定定位覆盖整个视口 */
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #000000;
+  /* 默认背景颜色为黑色 */
+  background-image: url('/src/backgrounds/4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+  filter: blur(5px);
+  z-index: -1;
+  /* 将背景层置于底层 */
+}
+
+/* ——— 顶部栏 ——— */
+.top-bar {
+  position: relative;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  font-family: Font;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* 确保标题栏在其他内容之上 */
+  
+}
+
+/* 标题 */
+.title {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Font;
+}
+
+/* 导航链接组 */
+.nav-links {
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+/* 导航项 */
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  display: block;
+}
+
+/* 下拉菜单容器 */
+.dropdown {
+  position: relative;
+}
+
+/* 隐藏的下拉内容 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0px);
+  left: 0;
+  background: #363636;
+  border-radius: 4px;
+  padding: 8px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 100px;
+  z-index: 10;
+}
+
+/* 下拉链接 */
+.dropdown-content a {
+  color: #fff;
+  padding: 6px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 悬停或焦点时显示下拉内容 */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* ——— 内容区 ——— */
+/* 主内容容器 */
+.content-container {
+  max-width: 80%;
+  margin: 150px auto 20px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  text-align: center;
+  font-family: Font;
+}
+
+/* 子内容容器 */
+.content-container2 {
+  max-width: 80%;
+  margin: 20px auto 20px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  text-align: left;
+  font-family: Font;
+}
+
+.contact-link {
+  color: #2fcfff;
+}
+
+/* ——— 特殊设定 ——— */
+
+/* 下载链接 */
+.download-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0092be;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #1a9dbd;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

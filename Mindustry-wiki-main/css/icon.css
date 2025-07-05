@@ -1,0 +1,60 @@
+.icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .icon::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('/src/datas/items/item-scrap.png');  /* ✅ 图标路径 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 6px;
+  }
+
+
+
+  .icon1 {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .icon1::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('/src/datas/items/item-scrap.png');  /* ✅ 图标路径 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 6px;
+  }
+
+
+
+  .item_img-1 {
+    width: 200px;                     /* 图片宽度 */
+    height: 200px;                    /* 图片高度，必须指定 */
+    background-image: url('/src/datas/Star/S-planet/Unit/Player/unit-alpha-ui.png');
+    background-size: contain;         /* 图片缩放保持比例填满容器 */
+    background-repeat: no-repeat;    /* 不重复 */
+    background-position: center;     /* 居中显示 */
+    border-radius: 8px;              /* 圆角 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 阴影 */
+  }
+  .image-text-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;                       /* 图片和标题之间间距 */
+  }
+  
+  #name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  

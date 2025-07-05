@@ -1,0 +1,137 @@
+/* 页面基础设置 */
+body {
+  background: #e0e0e0;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 80px 0 40px 0;
+}
+
+
+/* 左侧图标区域 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 12px;
+  justify-items: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 0 16px 16px 0;
+  padding: 16px;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  width: 40vw;         /* 限制1：宽度=视口宽度的 */
+  min-width: 320px;    /* 限制2：最小宽度 */
+  max-width: 5020px;   /* 左侧图标区域 */
+  position: relative;
+  left: 0;
+  align-items: end;
+}
+
+.name {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 10px;
+  
+}
+
+/* 图标元素 */
+.Jump {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.Jump:hover {
+  transform: scale(1.05);
+}
+
+.Jump img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.Jump span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 浮窗样式 */
+.tooltip {
+  position: fixed;
+  top: 20%; /* 固定在屏幕顶部 20% */
+  right: 0; /* 紧贴屏幕右边边框 */
+  width: 300px;
+  background: white;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px 0 0 8px; /* 仅左侧圆角 */
+  font-size: 14px;
+  color: #333;
+  z-index: 999;
+
+  /* 初始隐藏 */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%); /* 向右移出屏幕 */
+  transition: all 0.3s ease;
+}
+
+/* 显示时的样式 */
+.tooltip.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0); /* 回到屏幕内 */
+}
+
+/* 隐藏时的样式 */
+.tooltip.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%); /* 向右移出屏幕 */
+}
+
+/* 关闭按钮样式 */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+
+
+
+
+
+
+
+body::before {
+  background: url("/src/backgrounds/8.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 80px 0 40px 0; /* 顶部为导航栏预留空间 */
+}
+
+

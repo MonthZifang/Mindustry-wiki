@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonthCloud 注册</title>
+    <link rel="stylesheet" href="css/fas.css">
+    <link rel="stylesheet" href="css/regsite.css">
+    <script src="/js/jquery-3.7.1.js"></script><!--未压缩版本-->
+
+</head>
+<body>
+    
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <ul>
+            <img src="/src/favicon.ico"></img>
+            <h2>MonthCloud</h2>
+            <li><a href="/" class="id1">首页</a></li>
+            <li><a href="/server.html" class="id2">服务器选购</a></li>
+            <li><a href="/about.html">关于与反馈</a></li>
+            <li><a href="/callus.html">联系我们</a></li>
+            <li><a href="/login.html">注册与登录</a></li>
+            <!--
+            <li><a href="https://github.com/MonthZifang">git?</a></li>
+            <li><a href="../存储分享/存储分享.zip">拉取html css文件</a></li>
+            -->
+        </ul>
+    </div>
+    <!-- 内容 -->
+    <div class="content">
+        <div class="regisite">
+            <div class="regisite_div">
+                
+                <h2 style="text-align: center;">注册</h2>
+                <br>
+
+                <div class="form-container">
+                    <form action="/" method="post">
+                        <!-- 注册 -->
+                        <div class="form-group">
+                            <label for="username">用户名：</label>
+                            <input type="text" id="username" name="username">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">密码：</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">邮箱：</label>
+                            <input type="email" id="email" name="email">
+                            <input type="button" value="获取验证码">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="captcha">验证码：</label>
+                            <input type="text" id="captcha" name="captcha">
+                        </div>
+                        
+                        <div class="agreement">
+                            <input type="checkbox" id="xieyi" name="xieyi">
+                            <span></span>
+                            <label for="xieyi">是否同意</label>
+                            <a id="xieyi_click">月月云用户协议</a>
+                        </div>
+            
+                        <div class="login-link">
+                            <a href="/login.html">已有账户？登录</a>
+                        </div>
+                        <br>
+            
+                        <input type="submit" value="注册" class="submit-btn">
+                    </form>
+                </div>
+
+                <dialog id="error_reg" class="error_reg">
+                    <h2 id="error_reg_h2">错误</h2>
+                    <p>请填写所有字段并同意用户协议。</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <button onclick="error_reg.close()">关闭</button>
+                </dialog>
+
+                <dialog id="xieyi_dialog" class="error_reg" style="height: 300px;">
+                    <h2 id="error_reg_h2">月月云用户协议</h2>
+                    <p>修订时间：xxxx年xx月xx日 xx:xx</p>
+                    <p>............................</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <button onclick="xieyi.close()">关闭</button>
+                </dialog>
+                <script src="/js/regisite.js"></script>
+
+                <script>
+                    const xieyi = document.getElementById("xieyi_dialog");
+                    $(document).ready(function(){
+                      $("#xieyi_click").click(function(){
+                        xieyi.showModal()
+                        //$(this).hide();
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+<!--
+<body>
+
+    <div class="content">
+        <div class="container">
+
+            <div class="left">
+                <div class="photo-frame">
+                    <img src="your-image.jpg" alt="1-8K 照片" class="photo">
+                </div>
+            </div>
+
+
+            <div class="right regisite">
+                <div>
+                    <form>
+                        <label for="username">用户名：</label>
+                        <input type="text" id="username" name="username" required><br><br>
+                        <input type="submit" value="注册">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+-->
+</html>

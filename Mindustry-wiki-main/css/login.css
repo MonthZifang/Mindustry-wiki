@@ -1,0 +1,215 @@
+/* 内容区域样式 */
+.content {
+  margin-top: 70px;
+  /* 防止内容被导航栏遮挡 */
+  color: rgb(131, 179, 224);
+}
+
+/* 注册区域样式 */
+.regisite {
+  color: black;
+
+}
+
+.regisite_div {
+  background-color: rgba(255, 255, 255, 0.493);
+  /* 透明度为0.5的白色背景 */
+  width: 400px;
+  /*height: 600px;*/
+  margin: 0 auto;
+  left: 5vh;
+  top: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px 5px #5a5a5a59;
+
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  color: #000000;
+  vertical-align: middle;
+  min-width: 0;
+  /* 防止内容溢出 */
+
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+
+  backdrop-filter: blur(10px);
+
+}
+
+.form-group {
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+}
+
+.form-group label {
+  margin-right: 10px;
+  width: 70px;
+  /* 固定宽度，根据需要调整 */
+  text-align: right;
+  /* 标签文本右对齐 */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="text"] {
+  padding: 6px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  flex-grow: 1;
+  /* 输入框填充剩余空间 */
+  box-sizing: border-box;
+}
+
+.form-group input[type="button"] {
+  padding: 6px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  /* 与输入框间隔 */
+}
+
+.form-group input[type="button"]:hover {
+  background-color: #45a049;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="email"]:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+.form-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f0f0f0;
+  border: 1px solid #ff0000;
+  border-radius: 3px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.agreement input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1.5px solid #000000;
+  border-radius: 3px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.agreement input[type="checkbox"]:checked {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  border: 1.5px solid #000000;
+}
+
+.agreement input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.3px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.agreement a {
+  color: #0044ff;
+  text-decoration: none;
+}
+
+.agreement a:hover {
+  text-decoration: underline;
+}
+
+.login-link {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.submit-btn {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+
+
+
+.error {
+  color: #d9534f;
+  font-size: 0.9em;
+}
+
+.error_reg {
+  /*left: 5vh;
+    top: 40px;*/
+  width: 600px;
+  margin: auto;
+  border-color: rgb(0, 0, 0);
+  border-width: 0px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 5px #5a5a5a59;
+  text-align: center;
+}
+
+.error_reg h2 {
+  color: #d9534f;
+  text-align: center;
+}
+
+.error_reg button {
+  background-color: #5cb85c;
+  color: white;
+  padding: 6px 160px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.error_reg p {
+  text-align: left;
+  text-indent: 20px;
+}
+
+.error_reg::backdrop {
+  background-color: #dddddd90;
+  backdrop-filter: blur(5px);
+
+}

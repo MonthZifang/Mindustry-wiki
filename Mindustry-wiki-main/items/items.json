@@ -1,0 +1,26 @@
+{
+    "items": [
+        "ITEM_copper",
+        "ITEM_lead",
+        "ITEM_waste"
+    ],
+    
+    "ITEM_copper": {
+        "name": {
+            "zh": "铜"
+        },
+        "icon": "Copper.png"
+    },
+    "ITEM_lead": {
+        "name": {
+            "zh": "铅"
+        },
+        "icon": "Lead.png"
+    },
+    "ITEM_waste": {
+        "name": {
+            "zh": "废料"
+        },
+        "icon": "Waste.png"
+    }
+}
